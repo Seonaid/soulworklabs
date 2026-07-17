@@ -1,0 +1,9 @@
+# Section display order + meta label, matched against the `section` field in library.yml.
+- name: "Essays"
+  meta: "Long-form writing"
+- name: "Talks & Conversations"
+  meta: "Audio / video"
+- name: "Courses & Workshops (archive)"
+  meta: "Prior cohorts"
+- name: "Field Notes"
+  meta: "Working record"

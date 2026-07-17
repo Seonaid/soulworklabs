@@ -1,0 +1,103 @@
+{{ define "main" }}
+{{ $p := .Params }}
+<main>
+
+  <!-- HERO -->
+  <section class="sw-hero">
+    {{ if site.Params.heroSpiral }}
+    <div class="sw-hero__spiral" data-spin>
+      <svg viewBox="-320 -320 640 640" width="100%" height="100%">
+        <path d="{{ hugo.Data.spirals.hero }}" fill="none" stroke="#3f5140" stroke-width="0.7" opacity="0.5" {{ if site.Params.ambientMotion }}style="animation:sw-spin 160s linear infinite"{{ end }}/>
+        <path d="{{ hugo.Data.spirals.hero }}" fill="none" stroke="#9a7433" stroke-width="0.7" opacity="0.4" transform="rotate(180)" {{ if site.Params.ambientMotion }}style="animation:sw-spin 160s linear infinite"{{ end }}/>
+      </svg>
+    </div>
+    {{ end }}
+    <div class="sw-hero__inner">
+      <div class="sw-eyebrow sw-hero__eyebrow" data-rise>{{ $p.eyebrow }}</div>
+      <h1 class="sw-hero__title" data-rise>{{ $p.hero_title | safeHTML }}</h1>
+      <p class="sw-hero__sub" data-rise>{{ $p.hero_sub }}</p>
+      <div class="sw-hero__actions" data-rise>
+        <a href="{{ "/#work" | relURL }}" class="sw-btn sw-btn--primary">Explore the work &rarr;</a>
+        <a href="{{ "/founder/" | relURL }}" class="sw-btn sw-btn--secondary">Read the founder&rsquo;s story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE BAND -->
+  <section class="sw-hero-image">
+    <div class="sw-hero-image__frame">
+      <div class="sw-image-placeholder">{{ $p.hero_image_placeholder }}</div>
+    </div>
+  </section>
+
+  <!-- THE INSIGHT -->
+  <section class="sw-insight">
+    <div class="sw-insight__inner">
+      <div class="sw-section-label sw-insight__label">{{ $p.insight_eyebrow }}</div>
+      <div class="sw-insight__grid">
+        <div>
+          <p class="sw-insight__quote">{{ $p.insight_quote | markdownify }}</p>
+          <p class="sw-insight__body">{{ $p.insight_col1_body | markdownify }}</p>
+        </div>
+        <div>
+          {{ range $p.insight_col2_body }}
+          <p class="sw-insight__body">{{ . | markdownify }}</p>
+          {{ end }}
+          <p class="sw-insight__accent">{{ $p.insight_accent_line }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE ARC -->
+  <section class="sw-arc">
+    <div class="sw-arc__inner">
+      <div class="sw-section-label sw-arc__label">{{ $p.arc_eyebrow }}</div>
+      <h2 class="sw-arc__title">{{ $p.arc_title }}</h2>
+      <p class="sw-arc__body">{{ $p.arc_body }}</p>
+      <div class="sw-arc__grid">
+        {{ range hugo.Data.arc }}
+        <div class="sw-arc__cell">
+          <div class="sw-arc__cell-top">
+            <span class="sw-arc__cell-num" style="color:{{ .accent }}">0{{ .n }}</span>
+            <span class="sw-arc__cell-rule" style="background:{{ .accent }}"></span>
+          </div>
+          <h3 class="sw-arc__cell-name" style="color:{{ .accent }}">{{ .name }}</h3>
+          <p class="sw-arc__cell-desc">{{ .desc }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- THE WORK / PRODUCT MASONRY -->
+  <section id="work" class="sw-work">
+    <div class="sw-work__inner">
+      <div class="sw-work__header">
+        <div>
+          <div class="sw-section-label sw-work__label">{{ $p.work_eyebrow }}</div>
+          <h2 class="sw-work__title">{{ $p.work_title }}</h2>
+        </div>
+        <div class="sw-work__legend">
+          {{ range hugo.Data.arc }}
+          <span class="sw-work__legend-item"><span class="sw-work__legend-dot" style="background:{{ .accent }}"></span>{{ .name }}</span>
+          {{ end }}
+        </div>
+      </div>
+      {{ partial "masonry.html" hugo.Data.products }}
+    </div>
+  </section>
+
+  <!-- CLOSING / VISION -->
+  <section class="sw-vision">
+    <div class="sw-vision__inner">
+      <div class="sw-section-label sw-vision__label">{{ $p.vision_eyebrow }}</div>
+      <p class="sw-vision__statement">{{ $p.vision_statement }}</p>
+      <div class="sw-vision__mark">
+        {{ partial "spiral-mark.html" (dict "size" 44 "stroke" "#9a7433" "strokeWidth" 2.2 "spin" "90s") }}
+      </div>
+    </div>
+  </section>
+
+</main>
+{{ end }}

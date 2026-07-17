@@ -1,0 +1,29 @@
+{{/* Port of ProductCard.dc.html. Expects a product dict (title, kind, phase, blurb, price, note, featured, url). */}}
+{{ $p := . }}
+{{ $accentMap := dict
+  "Clear" "var(--sw-clear)"
+  "Receive" "var(--sw-receive)"
+  "Steward" "var(--sw-steward)"
+  "Act" "var(--sw-act)"
+  "Practice · Entry" "var(--sw-clear)"
+  "The book" "var(--sw-book)"
+}}
+{{ $accent := index $accentMap $p.phase }}
+{{ if not $accent }}{{ $accent = "var(--sw-clear)" }}{{ end }}
+<a href="{{ $p.url }}" class="sw-card" style="--sw-card-accent:{{ $accent }}">
+  <div class="sw-card__top">
+    <div class="sw-card__phase-group">
+      <span class="sw-card__dot"></span>
+      <span class="sw-card__phase">{{ $p.phase }}</span>
+    </div>
+    {{ if $p.featured }}<span class="sw-card__pill">Start here</span>{{ end }}
+  </div>
+  <h3 class="sw-card__title">{{ $p.title }}</h3>
+  <div class="sw-card__kind">{{ $p.kind }}</div>
+  <p class="sw-card__blurb">{{ $p.blurb }}</p>
+  {{ if $p.note }}<p class="sw-card__note">{{ $p.note }}</p>{{ end }}
+  <div class="sw-card__footer">
+    {{ if $p.price }}<span class="sw-card__price">{{ $p.price }}</span>{{ end }}
+    <span class="sw-card__enter">Enter &rarr;</span>
+  </div>
+</a>

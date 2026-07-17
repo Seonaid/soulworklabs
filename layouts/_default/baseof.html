@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} &middot; {{ site.Title }}{{ end }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{{ with resources.Get "css/tokens.css" }}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
+{{ with resources.Get "css/main.css" }}<link rel="stylesheet" href="{{ (. | minify).RelPermalink }}">{{ end }}
+</head>
+<body>
+<div class="sw-page">
+  {{ partial "nav.html" . }}
+  {{ block "main" . }}{{ end }}
+  {{ partial "footer.html" . }}
+</div>
+</body>
+</html>

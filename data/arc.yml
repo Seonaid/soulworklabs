@@ -1,0 +1,17 @@
+# The four-step transformational arc. Order is fixed: Clear → Receive → Steward → Act.
+- n: 1
+  name: "Clear"
+  accent: "var(--sw-clear)"
+  desc: "Make room. Clear the involuntary obligations and inherited noise so what's genuinely yours has somewhere to land."
+- n: 2
+  name: "Receive"
+  accent: "var(--sw-receive)"
+  desc: "Learn to let good things actually reach you — to want out loud, to ask, to take in what arrives without rushing past it."
+- n: 3
+  name: "Steward"
+  accent: "var(--sw-steward)"
+  desc: "Right relationship with what flows to you: money, community, support, time. Find the sustainable \"Enough.\""
+- n: 4
+  name: "Act"
+  accent: "var(--sw-act)"
+  desc: "Move back into the world with the calling claimed — acting from a still centre rather than the weight of it all."

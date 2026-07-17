@@ -1,0 +1,26 @@
+<footer class="sw-footer">
+  <div class="sw-footer__inner">
+    <div class="sw-footer__brand">
+      <div class="sw-footer__brand-row">
+        {{ partial "spiral-mark.html" (dict "size" 24 "stroke" "#c9a24a" "strokeWidth" 2.4) }}
+        <span class="sw-footer__wordmark">Soulwork&nbsp;Labs</span>
+      </div>
+      <p class="sw-footer__tagline">The universe is waiting to find out what you&rsquo;ll do.</p>
+    </div>
+    <div class="sw-footer__cols">
+      <div class="sw-footer__col">
+        <span class="sw-footer__col-label">Pages</span>
+        <a href="{{ "/" | relURL }}" class="sw-footer__link">Welcome</a>
+        <a href="{{ "/#work" | relURL }}" class="sw-footer__link">The Work</a>
+        <a href="{{ "/founder/" | relURL }}" class="sw-footer__link">Founder</a>
+        <a href="{{ "/library/" | relURL }}" class="sw-footer__link">Library</a>
+      </div>
+      <div class="sw-footer__col">
+        <span class="sw-footer__col-label">Elsewhere</span>
+        <span class="sw-footer__elsewhere">soulworklabs.com</span>
+        <span class="sw-footer__elsewhere-note">A findable home base, not a funnel. This work travels by hand.</span>
+      </div>
+    </div>
+  </div>
+  <div class="sw-footer__bottom">Provisional &mdash; everything here is an experiment &nbsp;&middot;&nbsp; &copy; 2026 Soulwork Labs</div>
+</footer>

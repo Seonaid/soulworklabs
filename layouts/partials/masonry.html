@@ -1,0 +1,15 @@
+{{/* Distributes the given product list into N vertical flex columns, round-robin by index.
+  Do NOT use CSS columns/break-inside — see README masonry gotcha. Expects a list of products as context. */}}
+{{ $products := . }}
+{{ $numCols := 3 }}
+<div class="sw-masonry">
+  {{ range $col := (seq 0 (sub $numCols 1)) }}
+  <div class="sw-masonry__col">
+    {{ range $i, $p := $products }}
+      {{ if eq (mod $i $numCols) $col }}
+        {{ partial "product-card.html" $p }}
+      {{ end }}
+    {{ end }}
+  </div>
+  {{ end }}
+</div>

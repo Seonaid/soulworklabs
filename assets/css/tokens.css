@@ -1,0 +1,51 @@
+/* Soulwork Labs — brand tokens */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Surfaces */
+  --sw-parchment:   #e9dfca;   /* page background */
+  --sw-surface:     #f4eddc;   /* cards, raised panels */
+  --sw-surface-alt: #ece3ce;   /* tinted section bands */
+
+  /* Ink & text */
+  --sw-ink:         #2a2620;   /* headings, dark footer bg */
+  --sw-body:        #544d42;   /* running text */
+  --sw-muted:       #8a8072;   /* meta, captions */
+  --sw-muted-strong:#6b6355;   /* nav, sub-labels */
+
+  /* Arc accents (use sparingly) */
+  --sw-clear:       #3f5140;   /* primary — forest */
+  --sw-clear-deep:  #2a3a2c;   /* primary hover */
+  --sw-receive:     #2f4a54;   /* cobalt */
+  --sw-steward:     #9a7433;   /* amber */
+  --sw-act:         #a2543a;   /* terracotta */
+  --sw-book:        #5f5470;   /* violet */
+
+  /* Utility */
+  --sw-link:        #7c5a2b;
+  --sw-link-hover:  #a2543a;
+  --sw-gold:        #c9a24a;   /* mark on dark */
+  --sw-on-dark:     #d8cdb4;   /* text on ink footer */
+  --sw-on-dark-dim: #b8ac93;
+  --sw-line:        rgba(42, 38, 32, 0.12);
+  --sw-line-strong: rgba(42, 38, 32, 0.16);
+
+  /* Type */
+  --sw-serif: "EB Garamond", Georgia, serif;
+  --sw-mono:  "IBM Plex Mono", ui-monospace, monospace;
+}
+
+/* Baseline */
+body { background: var(--sw-parchment); color: var(--sw-ink); font-family: var(--sw-serif); }
+a    { color: var(--sw-link); text-decoration: none; }
+a:hover { color: var(--sw-link-hover); }
+
+/* Mono label / eyebrow */
+.eyebrow {
+  font-family: var(--sw-mono);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sw-link);
+}

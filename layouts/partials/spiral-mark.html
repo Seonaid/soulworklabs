@@ -1,0 +1,6 @@
+{{/* Renders the small logarithmic-spiral wordmark/motif.
+  Params: size (px, default 26), stroke (color, default #3f5140), strokeWidth (default 2.4), spin (duration string like "90s", omit for static) */}}
+{{ $size := .size | default 26 }}
+{{ $stroke := .stroke | default "#3f5140" }}
+{{ $strokeWidth := .strokeWidth | default 2.4 }}
+<svg viewBox="-42 -42 84 84" width="{{ $size }}" height="{{ $size }}" class="sw-mark"{{ if .spin }} data-spin style="animation:sw-spin {{ .spin }} linear infinite"{{ end }}><path d="{{ hugo.Data.spirals.mark }}" fill="none" stroke="{{ $stroke }}" stroke-width="{{ $strokeWidth }}" stroke-linecap="round"/></svg>

@@ -1,0 +1,12 @@
+{{ $base := .File.BaseFileName }}
+<nav class="sw-nav">
+  <a href="{{ "/" | relURL }}" class="sw-nav__brand">
+    {{ partial "spiral-mark.html" (dict "size" 26 "stroke" "#3f5140" "strokeWidth" 2.4) }}
+    <span class="sw-nav__wordmark">Soulwork&nbsp;Labs</span>
+  </a>
+  <div class="sw-nav__links">
+    <a href="{{ "/#work" | relURL }}" class="sw-nav__link">The&nbsp;Work</a>
+    <a href="{{ "/founder/" | relURL }}" class="sw-nav__link{{ if eq $base "founder" }} sw-nav__link--active{{ end }}">Founder</a>
+    <a href="{{ "/library/" | relURL }}" class="sw-nav__link{{ if eq $base "library" }} sw-nav__link--active{{ end }}">Library</a>
+  </div>
+</nav>

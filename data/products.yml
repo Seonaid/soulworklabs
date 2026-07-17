@@ -1,0 +1,83 @@
+# Program cards. Order in this file = display order in the masonry.
+# Accent color is derived from `phase` in layouts/partials/product-card.html —
+# do not add an accent field here.
+- title:    "The Soft Start"
+  kind:     "5-minute daily practice"
+  phase:    "Practice · Entry"
+  blurb:    "Short morning practices for Big Days — any day that asks you to show up as your best self. It deliberately doesn't rank your needs. The way in, catching you at your most honest, before the armor goes on."
+  price:    "$25–$50"
+  note:     ""
+  featured: true
+  url:      "#"
+
+- title:    "Spacious"
+  kind:     "6-week course"
+  phase:    "Clear"
+  blurb:    "Clearing unwanted or involuntary obligations to make space for what is genuinely supportive. A new, less punishing relationship with time."
+  price:    ""
+  note:     ""
+  featured: false
+  url:      "#"
+
+- title:    "The FOMO Fix"
+  kind:     "~2-hour workshop"
+  phase:    "Clear"
+  blurb:    "For overextended people-pleasers: learning to say a heartfelt no, and making real room for what you actually want to do."
+  price:    ""
+  note:     ""
+  featured: false
+  url:      "#"
+
+- title:    "Speaking of Desire"
+  kind:     "2-hour workshop + journaling"
+  phase:    "Receive"
+  blurb:    "Clarify what you actually want and build the courage to ask for it directly — calibrating desire, finding the deeper need beneath the surface request, without the anxiety of rejection."
+  price:    ""
+  note:     ""
+  featured: false
+  url:      "#"
+
+- title:    "Nourished"
+  kind:     "multi-week course"
+  phase:    "Receive"
+  blurb:    "Appreciative practices that let good things actually land. For people who rush meals, skip past their own accomplishments, and struggle to receive."
+  price:    ""
+  note:     ""
+  featured: false
+  url:      "#"
+
+- title:    "Better Than Abundance"
+  kind:     "workshop + modules"
+  phase:    "Steward"
+  blurb:    "Locate the sustainable \"Enough\" between scarcity and abundance, and break the feast-or-famine cycle. Includes a centering practice, business fundamentals, journaling prompts, and a \"Know Your Numbers\" module on sustainable client load."
+  price:    ""
+  note:     ""
+  featured: false
+  url:      "#"
+
+- title:    "Resourced"
+  kind:     "multi-week course"
+  phase:    "Steward"
+  blurb:    "Stewardship of the flows around you — money, but also community, support, relationship. Right relationship with what's actually available."
+  price:    ""
+  note:     ""
+  featured: false
+  url:      "#"
+
+- title:    "Effective"
+  kind:     "capstone course"
+  phase:    "Act"
+  blurb:    "The capstone. Everything prior pulled together, so you move back into the world with the calling claimed and the skill, relational capacity, and self-knowledge to act at the next level."
+  price:    ""
+  note:     ""
+  featured: false
+  url:      "#"
+
+- title:    "Yours to Do"
+  kind:     "ebook · the manifesto"
+  phase:    "The book"
+  blurb:    "The manifesto underlying the whole suite. Contemplative wisdom literature, not a workbook — written to be read slowly and returned to."
+  price:    ""
+  note:     "Meant to travel by hand — given after a real conversation, not pushed through a funnel."
+  featured: false
+  url:      "#"

@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ $p := .Params }}
+<main class="sw-library">
+  <div class="sw-library__inner">
+    <div class="sw-section-label sw-library__label">{{ $p.eyebrow }}</div>
+    <h1 class="sw-library__heading">{{ $p.heading }}</h1>
+    <p class="sw-library__intro">{{ $p.intro }}</p>
+    <p class="sw-library__caption">{{ $p.caption }}</p>
+
+    {{ partial "library-table.html" . }}
+  </div>
+</main>
+{{ end }}

@@ -1,0 +1,24 @@
+baseURL = "https://soulworklabs.com/"
+title = "Soulwork Labs"
+
+[params]
+  portraitSide = "right"    # 'left' or 'right' — which side the founder portrait sits on
+  ambientMotion = true      # rotating spiral SVGs
+  heroSpiral = true         # show the large rotating spiral behind the hero
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[menu]
+  [[menu.main]]
+    name = "The Work"
+    url = "/#work"
+    weight = 10
+  [[menu.main]]
+    name = "Founder"
+    url = "/founder/"
+    weight = 20
+  [[menu.main]]
+    name = "Library"
+    url = "/library/"
+    weight = 30

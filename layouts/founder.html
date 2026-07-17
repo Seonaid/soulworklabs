@@ -1,0 +1,37 @@
+{{ define "main" }}
+{{ $p := .Params }}
+{{ $side := $p.portrait_side | default site.Params.portraitSide | default "right" }}
+{{ $portraitColClass := "sw-founder__portrait-col--left" }}
+{{ $leadColClass := "sw-founder__lead-col--left" }}
+{{ if eq $side "right" }}
+  {{ $portraitColClass = "sw-founder__portrait-col--right" }}
+  {{ $leadColClass = "sw-founder__lead-col--right" }}
+{{ end }}
+<main class="sw-founder">
+  <div class="sw-founder__inner">
+    <div class="sw-section-label sw-founder__label">{{ $p.eyebrow }}</div>
+    <div class="sw-founder__top">
+      <div class="sw-founder__grid">
+        <div class="sw-founder__portrait-col {{ $portraitColClass }}">
+          <div class="sw-founder__portrait-frame">
+            <div class="sw-image-placeholder">{{ $p.portrait_placeholder }}</div>
+          </div>
+          <h1 class="sw-founder__name">{{ $p.name }}</h1>
+          <div class="sw-founder__role">{{ $p.role }}</div>
+        </div>
+        <div class="sw-founder__lead-col {{ $leadColClass }}">
+          {{ range $i, $para := $p.lead_paragraphs }}
+          <p class="{{ if eq $i 0 }}sw-founder__lead-p1{{ else }}sw-founder__lead-p2{{ end }}">{{ $para | markdownify }}</p>
+          {{ end }}
+        </div>
+      </div>
+      <div class="sw-founder__rest">
+        {{ .Content }}
+        <div class="sw-founder__cta">
+          <a href="{{ $p.cta_url | relURL }}" class="sw-btn sw-btn--primary">{{ $p.cta_label }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{{ end }}

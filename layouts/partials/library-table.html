@@ -1,0 +1,21 @@
+{{/* Renders data/library.yml grouped into the sections defined in data/library_sections.yml.
+  Ranges over the data — do not hardcode rows. */}}
+{{ range hugo.Data.library_sections }}
+  {{ $sec := . }}
+  {{ $items := where hugo.Data.library "section" $sec.name }}
+  {{ if gt (len $items) 0 }}
+  <div class="sw-library__section">
+    <div class="sw-library__section-head">
+      <h2 class="sw-library__section-name">{{ $sec.name }}</h2>
+      <span class="sw-library__section-meta">{{ $sec.meta }}</span>
+    </div>
+    {{ range $items }}
+    <a href="{{ .url }}" target="_blank" rel="noopener" class="sw-library__row">
+      <span class="sw-library__row-date">{{ .date }}</span>
+      <span class="sw-library__row-title">{{ .title }}</span>
+      <span class="sw-library__row-kind">{{ .type }} &nearr;</span>
+    </a>
+    {{ end }}
+  </div>
+  {{ end }}
+{{ end }}
