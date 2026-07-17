@@ -59,10 +59,10 @@
         {{ range hugo.Data.arc }}
         <div class="sw-arc__cell">
           <div class="sw-arc__cell-top">
-            <span class="sw-arc__cell-num" style="color:{{ .accent }}">0{{ .n }}</span>
-            <span class="sw-arc__cell-rule" style="background:{{ .accent }}"></span>
+            <span class="sw-arc__cell-num" style="{{ printf "color:%s" .accent | safeCSS }}">0{{ .n }}</span>
+            <span class="sw-arc__cell-rule" style="{{ printf "background:%s" .accent | safeCSS }}"></span>
           </div>
-          <h3 class="sw-arc__cell-name" style="color:{{ .accent }}">{{ .name }}</h3>
+          <h3 class="sw-arc__cell-name" style="{{ printf "color:%s" .accent | safeCSS }}">{{ .name }}</h3>
           <p class="sw-arc__cell-desc">{{ .desc }}</p>
         </div>
         {{ end }}
@@ -80,7 +80,7 @@
         </div>
         <div class="sw-work__legend">
           {{ range hugo.Data.arc }}
-          <span class="sw-work__legend-item"><span class="sw-work__legend-dot" style="background:{{ .accent }}"></span>{{ .name }}</span>
+          <span class="sw-work__legend-item"><span class="sw-work__legend-dot" style="{{ printf "background:%s" .accent | safeCSS }}"></span>{{ .name }}</span>
           {{ end }}
         </div>
       </div>

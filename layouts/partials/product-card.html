@@ -10,7 +10,7 @@
 }}
 {{ $accent := index $accentMap $p.phase }}
 {{ if not $accent }}{{ $accent = "var(--sw-clear)" }}{{ end }}
-<a href="{{ $p.url }}" class="sw-card" style="--sw-card-accent:{{ $accent }}">
+<a href="{{ $p.url }}" class="sw-card" style="{{ printf "--sw-card-accent:%s" $accent | safeCSS }}">
   <div class="sw-card__top">
     <div class="sw-card__phase-group">
       <span class="sw-card__dot"></span>
