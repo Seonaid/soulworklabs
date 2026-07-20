@@ -7,6 +7,11 @@
   {{ $portraitColClass = "sw-founder__portrait-col--right" }}
   {{ $leadColClass = "sw-founder__lead-col--right" }}
 {{ end }}
+{{/* The bio prose lives in the Markdown body, not front-matter — split on the marker
+  into the lead (2 paragraphs, styled in the grid column) and the rest below it. */}}
+{{ $bodyParts := split .Content "<!--rest-->" }}
+{{ $lead := index $bodyParts 0 }}
+{{ $rest := "" }}{{ if gt (len $bodyParts) 1 }}{{ $rest = index $bodyParts 1 }}{{ end }}
 <main class="sw-founder">
   <div class="sw-founder__inner">
     <div class="sw-section-label sw-founder__label">{{ $p.eyebrow }}</div>
@@ -20,13 +25,11 @@
           <div class="sw-founder__role">{{ $p.role }}</div>
         </div>
         <div class="sw-founder__lead-col {{ $leadColClass }}">
-          {{ range $i, $para := $p.lead_paragraphs }}
-          <p class="{{ if eq $i 0 }}sw-founder__lead-p1{{ else }}sw-founder__lead-p2{{ end }}">{{ $para | markdownify }}</p>
-          {{ end }}
+          {{ $lead | safeHTML }}
         </div>
       </div>
       <div class="sw-founder__rest">
-        {{ .Content }}
+        {{ $rest | safeHTML }}
         <div class="sw-founder__cta">
           <a href="{{ $p.cta_url | relURL }}" class="sw-btn sw-btn--primary">{{ $p.cta_label }}</a>
         </div>

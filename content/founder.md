@@ -5,12 +5,15 @@ eyebrow: "Founder"
 name: "[ Founder Name ]"
 role: "Founder of Soulwork Labs"
 portrait_placeholder: "Drop the founder's portrait"
-lead_paragraphs:
-  - "I spent a long time doing genuinely valuable work — caring for people, building things, holding systems together under pressure. Most of it mattered. Some of it was also, quietly, a place to hide."
-  - "Soulwork Labs is Wendell Berry applied to the inner life: careful, attentive stewardship of the one particular, irreplaceable thing that is you — your time, your energy, your callings. It borrows the Serenity Prayer’s central move and makes it a daily practice: the wisdom to know the difference between what’s yours to carry and what isn’t."
 cta_label: "See the work →"
 cta_url: "/#work"
 ---
+
+I spent a long time doing genuinely valuable work — caring for people, building things, holding systems together under pressure. Most of it mattered. Some of it was also, quietly, a place to hide.
+
+Soulwork Labs is Wendell Berry applied to the inner life: careful, attentive stewardship of the one particular, irreplaceable thing that is you — your time, your energy, your callings. It borrows the Serenity Prayer’s central move and makes it a daily practice: the wisdom to know the difference between what’s yours to carry and what isn’t.
+
+<!--rest-->
 
 Each of us carries threads — inherited stories, patterns, obligations, held in the body. The practice is teasing them apart and holding each one up to the light: is this mine to keep weaving forward, or mine to cut? Most, examined honestly, get rewoven. Some were never inheritance so much as harm passed down disguised as inheritance — and the responsible thing is to stop them here, to metabolize what you were handed rather than pass it on.
 

@@ -1,0 +1,4 @@
+{{/* Numbered eyebrow + heading pair inside sales-page story prose. Usage:
+  {{< sw-subhead "01" >}}Heading text{{< /sw-subhead >}} */}}
+<h2 class="sw-sales__subhead-eyebrow">{{ .Get 0 }}</h2>
+<h3 class="sw-sales__subhead-title">{{ .Inner }}</h3>

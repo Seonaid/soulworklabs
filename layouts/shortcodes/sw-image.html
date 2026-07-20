@@ -1,0 +1,9 @@
+{{/* An inline image slot dropped into sales-page story prose. Usage:
+  {{< sw-image src="img/sales/foo.jpg" alt="Descriptive alt / placeholder text" >}}
+  Real files go in static/img/sales/; until one exists this renders the site's
+  standard placeholder box. */}}
+<div class="sw-sales__media sw-sales__media--inline">
+  <div class="sw-sales__media-frame">
+    <div class="sw-image-placeholder">{{ .Get "alt" }}</div>
+  </div>
+</div>

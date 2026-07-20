@@ -8,12 +8,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 {{ with resources.Get "css/tokens.css" }}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
 {{ with resources.Get "css/main.css" }}<link rel="stylesheet" href="{{ (. | minify).RelPermalink }}">{{ end }}
+{{ if eq .Section "sales" }}{{ with resources.Get "css/sales.css" }}<link rel="stylesheet" href="{{ (. | minify).RelPermalink }}">{{ end }}{{ end }}
 </head>
 <body>
 <div class="sw-page">
-  {{ partial "nav.html" . }}
+  {{ if ne .Section "sales" }}{{ partial "nav.html" . }}{{ end }}
   {{ block "main" . }}{{ end }}
-  {{ partial "footer.html" . }}
+  {{ if ne .Section "sales" }}{{ partial "footer.html" . }}{{ end }}
 </div>
 </body>
 </html>

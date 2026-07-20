@@ -16,10 +16,14 @@
   /* Arc accents (use sparingly) */
   --sw-clear:       #3f5140;   /* primary — forest */
   --sw-clear-deep:  #2a3a2c;   /* primary hover */
-  --sw-receive:     #2f4a54;   /* cobalt */
-  --sw-steward:     #9a7433;   /* amber */
-  --sw-act:         #a2543a;   /* terracotta */
-  --sw-book:        #5f5470;   /* violet */
+  --sw-receive:      #2f4a54;   /* cobalt */
+  --sw-receive-deep: #20353d;
+  --sw-steward:      #9a7433;   /* amber */
+  --sw-steward-deep: #7c5d28;
+  --sw-act:          #a2543a;   /* terracotta */
+  --sw-act-deep:     #833f2c;
+  --sw-book:         #5f5470;   /* violet */
+  --sw-book-deep:    #4b4159;
 
   /* Utility */
   --sw-link:        #7c5a2b;

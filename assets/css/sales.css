@@ -1,0 +1,109 @@
+/* Soulwork Labs — Sales page (standalone, menu-less takeover). Loaded only for content/sales/*.
+   Ported from Sales Page.dc.html. Themed entirely via --accent/--accent-deep set on .sw-sales;
+   the closing panel (.sw-sales__final) is fixed ink/gold across every phase — never accent. */
+
+.sw-sales{min-height:100vh;position:relative;overflow-x:hidden;color:var(--sw-ink);font-family:var(--sw-serif)}
+
+/* Top brand mark (no nav) */
+.sw-sales__mark{display:flex;flex-direction:column;align-items:center;gap:10px;padding:34px 20px 0}
+.sw-sales__mark-word{font:500 12px/1 var(--sw-mono);letter-spacing:.26em;text-transform:uppercase;color:var(--sw-muted-strong)}
+
+/* Hero */
+.sw-sales__hero{max-width:940px;margin:0 auto;padding:clamp(44px,7vw,88px) clamp(22px,5vw,40px) clamp(30px,4vw,44px);text-align:center}
+.sw-sales__eyebrow{font:500 11px/1 var(--sw-mono);letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:22px}
+.sw-sales__hook{margin:0;font:italic 400 clamp(30px,5vw,58px)/1.14 var(--sw-serif);color:var(--sw-ink);letter-spacing:-.015em;text-wrap:balance;max-width:20ch;margin-inline:auto}
+.sw-sales__subhead{margin:26px auto 0;max-width:52ch;font:400 clamp(18px,2vw,21px)/1.55 var(--sw-serif);color:var(--sw-body);text-wrap:pretty}
+
+/* Image slots */
+.sw-sales__media{margin:0 auto clamp(30px,4vw,46px);padding:0 clamp(22px,5vw,40px)}
+.sw-sales__media--hero{max-width:1180px}
+.sw-sales__media--inline{max-width:820px;margin-top:34px;margin-bottom:34px}
+.sw-sales__media-frame{border:1px solid var(--sw-line-strong);border-radius:4px;overflow:hidden}
+.sw-sales__media--hero .sw-sales__media-frame{height:clamp(240px,42vw,500px)}
+.sw-sales__media--inline .sw-sales__media-frame{height:clamp(200px,34vw,400px)}
+.sw-sales__caption{margin:12px 2px 0;font:italic 400 14px/1.4 var(--sw-serif);color:var(--sw-body)}
+
+/* CTA (buy-cta partial) */
+.sw-sales__cta{display:flex;flex-direction:column;align-items:center;gap:12px;margin:0 0 clamp(46px,6vw,72px);padding:0 20px}
+.sw-sales__cta-btn{display:inline-flex;align-items:center;gap:12px;font:500 13px/1 var(--sw-mono);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--sw-surface);background:var(--accent);border:1px solid var(--accent);border-radius:2px;padding:20px 42px;box-shadow:0 12px 30px -14px rgba(42,38,32,.5);transition:transform .25s ease,box-shadow .25s ease}
+.sw-sales__cta-btn:hover{transform:translateY(-3px);box-shadow:0 18px 42px -16px rgba(42,38,32,.55);color:var(--sw-surface)}
+.sw-sales__cta-btn--gold{color:var(--sw-ink);background:var(--sw-gold);border-color:var(--sw-gold);padding:21px 46px;box-shadow:0 14px 34px -16px rgba(0,0,0,.6)}
+.sw-sales__cta-btn--gold:hover{color:var(--sw-ink)}
+.sw-sales__cta-arrow{font-family:var(--sw-serif);font-size:17px}
+.sw-sales__cta-sub{font:400 15px/1.4 var(--sw-serif);color:var(--sw-muted-strong)}
+.sw-sales__cta-sub strong{color:var(--sw-body)}
+.sw-sales__cta-sub--dark{color:var(--sw-on-dark-dim)}
+.sw-sales__cta-sub--dark strong{color:var(--sw-on-dark)}
+
+/* Story prose */
+.sw-sales__story{max-width:660px;margin:0 auto;padding:0 clamp(22px,5vw,40px)}
+.sw-sales__story p{margin:0 0 22px;font:400 18px/1.65 var(--sw-serif);color:var(--sw-body);text-wrap:pretty}
+.sw-sales__story blockquote{margin:0 0 8px}
+.sw-sales__story blockquote p{margin:0;font:italic 400 20px/1.5 var(--sw-serif);color:var(--accent)}
+.sw-sales__subhead-eyebrow{margin:44px 0 4px;font:500 12px/1 var(--sw-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.sw-sales__subhead-title{margin:0 0 16px;font:400 clamp(24px,3.2vw,34px)/1.2 var(--sw-serif);color:var(--sw-ink)}
+
+/* Permission-slip callout */
+.sw-sales__callout{max-width:820px;margin:clamp(40px,5vw,64px) auto;padding:clamp(34px,5vw,56px) clamp(26px,5vw,48px);background:var(--sw-surface);border:1px solid var(--sw-line);border-top:3px solid var(--accent);border-radius:3px;text-align:center}
+.sw-sales__callout-label{font:500 11px/1 var(--sw-mono);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+.sw-sales__callout-quote{margin:0;font:italic 400 clamp(23px,3.4vw,32px)/1.36 var(--sw-serif);color:var(--sw-ink);text-wrap:balance}
+.sw-sales__callout-quote em{font-style:italic;color:var(--accent)}
+.sw-sales__callout-body{margin:22px auto 0;max-width:48ch;font:400 17px/1.55 var(--sw-serif);color:var(--sw-body);text-wrap:pretty}
+
+/* What you'll practice */
+.sw-sales__learn{max-width:820px;margin:0 auto;padding:0 clamp(22px,5vw,40px)}
+.sw-sales__section-label{font:500 11px/1 var(--sw-mono);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.sw-sales__learn-title{margin:0 0 12px;font:400 clamp(26px,3.6vw,38px)/1.16 var(--sw-serif);color:var(--sw-ink);text-wrap:balance}
+.sw-sales__learn-intro{margin:0 0 28px;font:400 18px/1.6 var(--sw-serif);color:var(--sw-body);text-wrap:pretty}
+.sw-sales__learn-rows{display:flex;flex-direction:column;gap:2px;background:var(--sw-line);border:1px solid var(--sw-line-strong);border-radius:3px;overflow:hidden}
+.sw-sales__learn-row{background:var(--sw-surface);padding:22px 26px}
+.sw-sales__learn-num{font:500 11px/1 var(--sw-mono);letter-spacing:.14em;color:var(--accent);margin-bottom:8px}
+.sw-sales__learn-text{margin:0;font:400 18px/1.5 var(--sw-serif);color:var(--sw-body)}
+.sw-sales__learn-text strong{color:var(--sw-ink);font-weight:600}
+
+/* Is-for / Not-for */
+.sw-sales__fornot{max-width:960px;margin:clamp(40px,5vw,64px) auto;padding:0 clamp(22px,5vw,40px)}
+.sw-sales__fornot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(20px,3vw,34px)}
+.sw-sales__fornot-col{border:1px solid var(--sw-line);border-radius:3px;padding:clamp(26px,3vw,34px)}
+.sw-sales__fornot-col--for{background:var(--sw-surface)}
+.sw-sales__fornot-col--not{background:var(--sw-surface-alt)}
+.sw-sales__fornot-label{font:500 11px/1 var(--sw-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.sw-sales__fornot-label--not{color:var(--sw-act)}
+.sw-sales__fornot-list{margin:0;padding-left:20px;font:400 17px/1.6 var(--sw-serif);color:var(--sw-body);display:flex;flex-direction:column;gap:12px}
+.sw-sales__fornot-risk{margin:22px auto 0;max-width:60ch;text-align:center;font:400 15.5px/1.5 var(--sw-serif);color:var(--sw-body);text-wrap:pretty}
+
+/* What's in the box */
+.sw-sales__box{max-width:820px;margin:0 auto;padding:0 clamp(22px,5vw,40px)}
+.sw-sales__box-title{margin:0 0 10px;font:400 clamp(26px,3.6vw,38px)/1.16 var(--sw-serif);color:var(--sw-ink)}
+.sw-sales__box-intro{margin:0 0 30px;font:400 18px/1.6 var(--sw-serif);color:var(--sw-body);text-wrap:pretty}
+.sw-sales__box-label{font:500 11px/1 var(--sw-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--sw-muted-strong);margin:0 0 14px}
+.sw-sales__box-modules{margin:0 0 30px;padding-left:22px;font:400 18px/1.7 var(--sw-serif);color:var(--sw-body);display:flex;flex-direction:column;gap:6px}
+.sw-sales__box-bonuses{margin:0;padding-left:22px;font:400 18px/1.6 var(--sw-serif);color:var(--sw-body);display:flex;flex-direction:column;gap:12px}
+.sw-sales__box-bonuses strong{color:var(--sw-ink);font-weight:600}
+
+/* Testimonial */
+.sw-sales__testimonial{max-width:760px;margin:clamp(44px,6vw,72px) auto;padding:0 clamp(22px,5vw,40px);text-align:center}
+.sw-sales__testimonial-mark{opacity:.5;margin-bottom:18px}
+.sw-sales__testimonial-quote{margin:0;font:italic 400 clamp(22px,3.2vw,30px)/1.4 var(--sw-serif);color:var(--sw-ink);text-wrap:balance}
+.sw-sales__testimonial-by{margin-top:20px;font:500 11px/1 var(--sw-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--sw-muted-strong)}
+
+/* FAQ */
+.sw-sales__faq{max-width:760px;margin:0 auto;padding:0 clamp(22px,5vw,40px)}
+.sw-sales__faq-list{display:flex;flex-direction:column}
+.sw-sales__faq-item{border-top:1px solid var(--sw-line-strong);padding:18px 0}
+.sw-sales__faq-item:last-child{border-bottom:1px solid var(--sw-line-strong)}
+.sw-sales__faq-q{display:flex;justify-content:space-between;gap:16px;font:400 20px/1.35 var(--sw-serif);color:var(--sw-ink)}
+.sw-sales__faq-marker{color:var(--accent);font-size:22px;line-height:1}
+.sw-sales__faq-a{margin:14px 0 0;font:400 17px/1.6 var(--sw-serif);color:var(--sw-body);text-wrap:pretty}
+
+/* Final CTA — fixed ink/gold across every phase, never accent (see brief §5) */
+.sw-sales__final{max-width:820px;margin:clamp(46px,6vw,76px) auto 0;padding:clamp(38px,5vw,60px) clamp(26px,5vw,48px);background:var(--sw-ink);border-radius:4px;text-align:center}
+.sw-sales__final-mark{margin-bottom:18px}
+.sw-sales__final-title{margin:0 0 14px;font:400 clamp(26px,3.8vw,40px)/1.18 var(--sw-serif);color:var(--sw-surface-alt);text-wrap:balance}
+.sw-sales__final-body{margin:0 auto 30px;max-width:46ch;font:400 18px/1.55 var(--sw-serif);color:var(--sw-on-dark-dim);text-wrap:pretty}
+
+/* Minimal footer — © + one link only, no site nav */
+.sw-sales__footer{max-width:820px;margin:0 auto;padding:clamp(34px,4vw,48px) clamp(22px,5vw,40px);text-align:center}
+.sw-sales__footer-text{font:500 10px/1 var(--sw-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--sw-muted-strong)}
+.sw-sales__footer-text a{color:var(--sw-muted-strong)}
+.sw-sales__footer-text a:hover{color:var(--sw-link-hover)}

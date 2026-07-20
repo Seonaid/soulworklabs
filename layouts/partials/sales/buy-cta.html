@@ -1,0 +1,7 @@
+{{/* The repeated Buy button. Params: label, sub, price, url, gold (bool, for the
+  closing ink panel — see brief §5/§6; every other placement uses the phase accent). */}}
+{{ $gold := .gold }}
+<div class="sw-sales__cta">
+  <a href="{{ .url }}" class="sw-sales__cta-btn{{ if $gold }} sw-sales__cta-btn--gold{{ end }}">{{ .label }} <span class="sw-sales__cta-arrow">&rarr;</span></a>
+  <div class="sw-sales__cta-sub{{ if $gold }} sw-sales__cta-sub--dark{{ end }}">{{ .sub }} · <strong>{{ .price }}</strong></div>
+</div>

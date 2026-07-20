@@ -1,0 +1,148 @@
+{{ define "main" }}
+{{ $p := .Params }}
+
+{{/* One value drives the whole page's theme: map phase -> the arc accent tokens
+  already in tokens.css (never store hex per page). Defaults to Receive. */}}
+{{ $accentMap := dict
+  "Clear"   (slice "var(--sw-clear)" "var(--sw-clear-deep)")
+  "Receive" (slice "var(--sw-receive)" "var(--sw-receive-deep)")
+  "Steward" (slice "var(--sw-steward)" "var(--sw-steward-deep)")
+  "Act"     (slice "var(--sw-act)" "var(--sw-act-deep)")
+  "Book"    (slice "var(--sw-book)" "var(--sw-book-deep)")
+}}
+{{ $phase := $p.phase | default "Receive" }}
+{{ $accents := index $accentMap $phase }}
+{{ if not $accents }}{{ $accents = index $accentMap "Receive" }}{{ end }}
+{{ $accent := index $accents 0 }}
+{{ $accentDeep := index $accents 1 }}
+{{ $showMark := ne $p.show_mark false }}
+{{ $spin := "" }}{{ if ne $p.ambient_motion false }}{{ $spin = "120s" }}{{ end }}
+
+{{/* Long prose lives in the Markdown body (the opening story + the reinforcement
+  section) so refining copy is just editing Markdown, never YAML. The one marker
+  splits the two chunks so the callout + CTA 2 can land between them. */}}
+{{ $bodyParts := split .Content "<!--reinforcement-->" }}
+{{ $openingStory := index $bodyParts 0 }}
+{{ $reinforcement := "" }}{{ if gt (len $bodyParts) 1 }}{{ $reinforcement = index $bodyParts 1 }}{{ end }}
+
+<div class="sw-sales" style="{{ printf "--accent:%s;--accent-deep:%s" $accent $accentDeep | safeCSS }}">
+
+  {{ if $showMark }}
+  <div class="sw-sales__mark">
+    {{ partial "spiral-mark.html" (dict "size" 30 "stroke" "var(--accent)" "strokeWidth" 2.4 "spin" $spin) }}
+    <div class="sw-sales__mark-word">Soulwork&nbsp;Labs</div>
+  </div>
+  {{ end }}
+
+  <!-- ═══ HERO ═══ -->
+  <header class="sw-sales__hero">
+    <div class="sw-sales__eyebrow">{{ $p.eyebrow }}</div>
+    <h1 class="sw-sales__hook">{{ $p.hook }}</h1>
+    <p class="sw-sales__subhead">{{ $p.subhead | markdownify }}</p>
+  </header>
+
+  <div class="sw-sales__media sw-sales__media--hero">
+    <div class="sw-sales__media-frame">
+      <div class="sw-image-placeholder">{{ $p.hero_image_alt }}</div>
+    </div>
+  </div>
+
+  {{ range $p.ctas }}{{ if eq .after "hero" }}
+  {{ partial "sales/buy-cta.html" (dict "label" .label "sub" $p.buy_sub "price" $p.price "url" $p.buy_url) }}
+  {{ end }}{{ end }}
+
+  <!-- ═══ STORY ═══ -->
+  <section class="sw-sales__story">
+    {{ $openingStory | safeHTML }}
+  </section>
+
+  <!-- ═══ PERMISSION-SLIP CALLOUT ═══ -->
+  <section class="sw-sales__callout">
+    <div class="sw-sales__callout-label">{{ $p.callout.label }}</div>
+    <p class="sw-sales__callout-quote">{{ $p.callout.quote | markdownify }}</p>
+    <p class="sw-sales__callout-body">{{ $p.callout.body }}</p>
+  </section>
+
+  {{ range $p.ctas }}{{ if eq .after "callout" }}
+  {{ partial "sales/buy-cta.html" (dict "label" .label "sub" $p.buy_sub "price" $p.price "url" $p.buy_url) }}
+  {{ end }}{{ end }}
+
+  <!-- ═══ REINFORCEMENT PROSE ═══ -->
+  <section class="sw-sales__story">
+    {{ $reinforcement | safeHTML }}
+  </section>
+
+  <!-- ═══ WHAT YOU'LL PRACTICE ═══ -->
+  <section class="sw-sales__learn">
+    <div class="sw-sales__section-label">What you&rsquo;ll practice</div>
+    <h3 class="sw-sales__learn-title">{{ $p.learn_title }}</h3>
+    <p class="sw-sales__learn-intro">{{ $p.learn_intro }}</p>
+    <div class="sw-sales__learn-rows">
+      {{ range $i, $row := $p.learn }}
+      <div class="sw-sales__learn-row">
+        <div class="sw-sales__learn-num">0{{ add $i 1 }}</div>
+        <p class="sw-sales__learn-text"><strong>{{ $row.verb }}</strong> {{ $row.text }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <div class="sw-sales__media sw-sales__media--inline">
+    <div class="sw-sales__media-frame">
+      <div class="sw-image-placeholder">{{ $p.learn_image.alt }}</div>
+    </div>
+    {{ with $p.learn_image.caption }}<p class="sw-sales__caption">{{ . }}</p>{{ end }}
+  </div>
+
+  <!-- ═══ WHO IT'S FOR / NOT FOR ═══ -->
+  {{ partial "sales/for-not-for.html" . }}
+
+  {{ range $p.ctas }}{{ if eq .after "for-not-for" }}
+  {{ partial "sales/buy-cta.html" (dict "label" .label "sub" $p.buy_sub "price" $p.price "url" $p.buy_url) }}
+  {{ end }}{{ end }}
+
+  <!-- ═══ WHAT'S IN THE BOX ═══ -->
+  <section class="sw-sales__box">
+    <div class="sw-sales__section-label">What&rsquo;s included</div>
+    <h3 class="sw-sales__box-title">What&rsquo;s in the box</h3>
+    <p class="sw-sales__box-intro">{{ $p.box_intro }}</p>
+
+    <div class="sw-sales__box-label">Core meditations</div>
+    <ol class="sw-sales__box-modules">
+      {{ range $p.modules }}<li>{{ . }}</li>{{ end }}
+    </ol>
+
+    <div class="sw-sales__box-label">Bonuses</div>
+    <ul class="sw-sales__box-bonuses">
+      {{ range $p.bonuses }}<li>{{ . | markdownify }}</li>{{ end }}
+    </ul>
+  </section>
+
+  <!-- ═══ TESTIMONIAL ═══ -->
+  <section class="sw-sales__testimonial">
+    <div class="sw-sales__testimonial-mark">{{ partial "spiral-mark.html" (dict "size" 30 "stroke" "var(--accent)" "strokeWidth" 2.4) }}</div>
+    <blockquote class="sw-sales__testimonial-quote">&ldquo;{{ $p.testimonial.quote }}&rdquo;</blockquote>
+    <div class="sw-sales__testimonial-by">{{ $p.testimonial.by }}</div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="sw-sales__faq">
+    <div class="sw-sales__section-label">Questions</div>
+    {{ partial "sales/faq.html" . }}
+  </section>
+
+  <!-- ═══ FINAL CTA — fixed ink/gold, never the phase accent (brief §5) ═══ -->
+  <section class="sw-sales__final">
+    <div class="sw-sales__final-mark">{{ partial "spiral-mark.html" (dict "size" 36 "stroke" "var(--sw-gold)" "strokeWidth" 2.4 "spin" $spin) }}</div>
+    <h3 class="sw-sales__final-title">{{ $p.final_cta.heading }}</h3>
+    <p class="sw-sales__final-body">{{ $p.final_cta.body }}</p>
+    {{ partial "sales/buy-cta.html" (dict "label" $p.final_cta.label "sub" $p.buy_sub "price" $p.price "url" $p.buy_url "gold" true) }}
+  </section>
+
+  <!-- Minimal footer -->
+  <footer class="sw-sales__footer">
+    <div class="sw-sales__footer-text">&copy; {{ now.Format "2006" }} Soulwork Labs &middot; <a href="{{ "https://soulworklabs.com" }}">soulworklabs.com</a></div>
+  </footer>
+
+</div>
+{{ end }}

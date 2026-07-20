@@ -1,5 +1,10 @@
 {{ define "main" }}
 {{ $p := .Params }}
+{{/* The Insight section's two prose columns live in the Markdown body — split on the
+  marker so col1 (1 paragraph) and col2 (2 paragraphs) land in their own grid columns. */}}
+{{ $bodyParts := split .Content "<!--col2-->" }}
+{{ $insightCol1 := index $bodyParts 0 }}
+{{ $insightCol2 := "" }}{{ if gt (len $bodyParts) 1 }}{{ $insightCol2 = index $bodyParts 1 }}{{ end }}
 <main>
 
   <!-- HERO -->
@@ -37,12 +42,10 @@
       <div class="sw-insight__grid">
         <div>
           <p class="sw-insight__quote">{{ $p.insight_quote | markdownify }}</p>
-          <p class="sw-insight__body">{{ $p.insight_col1_body | markdownify }}</p>
+          <div class="sw-insight__body">{{ $insightCol1 | safeHTML }}</div>
         </div>
         <div>
-          {{ range $p.insight_col2_body }}
-          <p class="sw-insight__body">{{ . | markdownify }}</p>
-          {{ end }}
+          <div class="sw-insight__body">{{ $insightCol2 | safeHTML }}</div>
           <p class="sw-insight__accent">{{ $p.insight_accent_line }}</p>
         </div>
       </div>

@@ -1,0 +1,9 @@
+{{/* Native <details> FAQ accordion, no JS. Expects page context (Params.faq: [{q,a}]). */}}
+<div class="sw-sales__faq-list">
+  {{ range .Params.faq }}
+  <details class="sw-sales__faq-item">
+    <summary class="sw-sales__faq-q">{{ .q }}<span class="sw-sales__faq-marker">+</span></summary>
+    <p class="sw-sales__faq-a">{{ .a }}</p>
+  </details>
+  {{ end }}
+</div>

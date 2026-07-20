@@ -1,0 +1,20 @@
+{{/* The two-column is-for / not-for lists + centered risk note. Expects page context
+  (Params: for_you, not_for_you, risk_note). */}}
+{{ $p := .Params }}
+<section class="sw-sales__fornot">
+  <div class="sw-sales__fornot-grid">
+    <div class="sw-sales__fornot-col sw-sales__fornot-col--for">
+      <div class="sw-sales__fornot-label">This is for you if</div>
+      <ul class="sw-sales__fornot-list">
+        {{ range $p.for_you }}<li>{{ . }}</li>{{ end }}
+      </ul>
+    </div>
+    <div class="sw-sales__fornot-col sw-sales__fornot-col--not">
+      <div class="sw-sales__fornot-label sw-sales__fornot-label--not">This is not for you if</div>
+      <ul class="sw-sales__fornot-list">
+        {{ range $p.not_for_you }}<li>{{ . }}</li>{{ end }}
+      </ul>
+    </div>
+  </div>
+  {{ with $p.risk_note }}<p class="sw-sales__fornot-risk">{{ . }}</p>{{ end }}
+</section>
