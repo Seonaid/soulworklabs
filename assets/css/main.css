@@ -150,6 +150,7 @@ a:hover{color:var(--sw-link-hover)}
 .sw-founder__lead-col--left{order:2}
 .sw-founder__lead-col--right{order:1}
 .sw-founder__portrait-frame{width:100%;max-width:340px;aspect-ratio:4/5;border-radius:4px;overflow:hidden;border:1px solid var(--sw-line-strong)}
+.sw-founder__portrait{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 .sw-founder__name{margin:22px 0 4px;font:400 clamp(30px,3.6vw,42px)/1.05 var(--sw-serif);color:var(--sw-ink);letter-spacing:-.01em}
 .sw-founder__role{font:500 11px/1.5 var(--sw-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--sw-link)}
 .sw-founder__lead-col{max-width:60ch}

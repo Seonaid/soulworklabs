@@ -10,8 +10,8 @@ eyebrow:    "A self-paced workshop · The Receive arc"
 hook:       "What if you could ask for what you want directly — with confidence, and without the fear of rejection?"
 subhead:    "Most of us learned to talk ourselves out of wanting. *Speaking of Desire* is a short, deep practice for telling a true yearning from a passing itch — and finding the courage to ask."
 
-price:      "$99"
-buy_url:    "https://products.soulworklabs.com/speaking-of-desire/signup"
+price:      "$77"
+buy_url:    "https://products.seonaidlee.com/products/courses/view/1026912/?action=signup"
 buy_sub:    "Self-paced · lifetime access"
 
 hero_image_alt: "Hero image — the opening, evocative photograph (glasses of water, an open hand, light)"

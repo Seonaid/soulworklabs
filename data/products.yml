@@ -35,7 +35,7 @@
   price:    ""
   note:     ""
   featured: false
-  url:      "#"
+  url:      "/sales/speaking-of-desire"
 
 - title:    "Nourished"
   kind:     "multi-week course"

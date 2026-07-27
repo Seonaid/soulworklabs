@@ -1,15 +1,15 @@
 ---
 title: "Founder"
 layout: "founder"
-eyebrow: "Founder"
-name: "[ Founder Name ]"
+eyebrow: "About"
+name: "Seonaid Lee" 
 role: "Founder of Soulwork Labs"
 portrait_placeholder: "Drop the founder's portrait"
 cta_label: "See the work →"
 cta_url: "/#work"
 ---
 
-I spent a long time doing genuinely valuable work — caring for people, building things, holding systems together under pressure. Most of it mattered. Some of it was also, quietly, a place to hide.
+I've spent much of my life doing genuinely valuable work — caring for people, building things, holding systems together under pressure. Some of it was well-compensated and came with prestige. Some of it was very poorly paid and done on the invisible margins. Most of it mattered. A lot of it was also, quietly, a place to hide.
 
 Soulwork Labs is Wendell Berry applied to the inner life: careful, attentive stewardship of the one particular, irreplaceable thing that is you — your time, your energy, your callings. It borrows the Serenity Prayer’s central move and makes it a daily practice: the wisdom to know the difference between what’s yours to carry and what isn’t.
 

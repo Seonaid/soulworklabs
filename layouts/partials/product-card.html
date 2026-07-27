@@ -10,7 +10,7 @@
 }}
 {{ $accent := index $accentMap $p.phase }}
 {{ if not $accent }}{{ $accent = "var(--sw-clear)" }}{{ end }}
-<a href="{{ $p.url }}" class="sw-card" style="{{ printf "--sw-card-accent:%s" $accent | safeCSS }}">
+<a href="{{ if eq $p.url "#" }}#{{ else }}{{ $p.url | strings.TrimPrefix "/" | relURL }}{{ end }}" class="sw-card" style="{{ printf "--sw-card-accent:%s" $accent | safeCSS }}">
   <div class="sw-card__top">
     <div class="sw-card__phase-group">
       <span class="sw-card__dot"></span>
@@ -24,6 +24,6 @@
   {{ if $p.note }}<p class="sw-card__note">{{ $p.note }}</p>{{ end }}
   <div class="sw-card__footer">
     {{ if $p.price }}<span class="sw-card__price">{{ $p.price }}</span>{{ end }}
-    <span class="sw-card__enter">Enter &rarr;</span>
+    <span class="sw-card__enter">See more &rarr;</span>
   </div>
 </a>

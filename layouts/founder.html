@@ -19,7 +19,9 @@
       <div class="sw-founder__grid">
         <div class="sw-founder__portrait-col {{ $portraitColClass }}">
           <div class="sw-founder__portrait-frame">
-            <div class="sw-image-placeholder">{{ $p.portrait_placeholder }}</div>
+            {{ with resources.Get "images/LEE_Seonaid-10094.jpg" }}
+            <img class="sw-founder__portrait" src="{{ .RelPermalink }}" alt="{{ $p.name }}">
+            {{ end }}
           </div>
           <h1 class="sw-founder__name">{{ $p.name }}</h1>
           <div class="sw-founder__role">{{ $p.role }}</div>
@@ -31,7 +33,7 @@
       <div class="sw-founder__rest">
         {{ $rest | safeHTML }}
         <div class="sw-founder__cta">
-          <a href="{{ $p.cta_url | relURL }}" class="sw-btn sw-btn--primary">{{ $p.cta_label }}</a>
+          <a href="{{ $p.cta_url | strings.TrimPrefix "/" | relURL }}" class="sw-btn sw-btn--primary">{{ $p.cta_label }}</a>
         </div>
       </div>
     </div>
