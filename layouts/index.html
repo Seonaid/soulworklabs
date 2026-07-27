@@ -31,7 +31,10 @@
   <!-- HERO IMAGE BAND -->
   <section class="sw-hero-image">
     <div class="sw-hero-image__frame">
-      <div class="sw-image-placeholder">{{ $p.hero_image_placeholder }}</div>
+      {{ with (resources.Get "images/variousphotography-rope-1937260.jpg").Resize "2560x q82" }}
+      <img class="sw-hero-image__photo" src="{{ .RelPermalink }}" alt="A tangled coil of rope, warm-toned">
+      {{ end }}
+      <div class="sw-hero-image__tint"></div>
     </div>
   </section>
 

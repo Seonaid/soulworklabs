@@ -71,6 +71,8 @@ a:hover{color:var(--sw-link-hover)}
 .sw-hero-image{padding:0 clamp(16px,4vw,56px) clamp(56px,8vw,104px)}
 .sw-hero-image__frame{position:relative;max-width:1280px;margin:0 auto;height:clamp(240px,42vw,520px);border-radius:4px;overflow:hidden;border:1px solid var(--sw-line-strong)}
 .sw-image-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:var(--sw-surface-alt);color:var(--sw-muted-strong);font:italic 400 15px/1.5 var(--sw-serif);text-align:center;padding:20px}
+.sw-hero-image__photo{width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:sepia(.7) saturate(1.5) hue-rotate(-12deg) brightness(.95) contrast(1.05)}
+.sw-hero-image__tint{position:absolute;inset:0;background:var(--sw-steward);opacity:.16;mix-blend-mode:multiply;pointer-events:none}
 
 /* ---------- Insight ---------- */
 .sw-insight{padding:clamp(40px,6vw,88px) clamp(20px,6vw,80px);border-top:1px solid var(--sw-line)}
