@@ -90,7 +90,7 @@
           {{ end }}
         </div>
       </div>
-      {{ partial "masonry.html" hugo.Data.products }}
+      {{ partial "masonry.html" (where hugo.Data.products "inactive" "!=" true) }}
     </div>
   </section>
 

@@ -1,6 +1,7 @@
 # Program cards. Order in this file = display order in the masonry.
 # Accent color is derived from `phase` in layouts/partials/product-card.html —
 # do not add an accent field here.
+# Set `inactive: true` to hide a not-yet-ready product from the masonry without deleting it.
 - title:    "Should I?"
   kind:     "Workbook"
   phase:    "Clear · Entry"
@@ -8,6 +9,7 @@
   price:    "$7"
   note:     ""
   featured: true
+  inactive: false
   url:      "https://products.seonaidlee.com/products/courses/view/1193910"
 
 
@@ -18,33 +20,37 @@
   price:    ""
   note:     ""
   featured: false
+  inactive: true
   url:      "#"
 
 - title:    "Spacious"
   kind:     "6-week course"
   phase:    "Clear"
-  blurb:    "Clearing unwanted or involuntary obligations to make space for what is genuinely supportive. A new, less punishing relationship with time."
+  blurb:    "Clear unwanted or involuntary obligations to make space for what is genuinely supportive. Develop a new, less punishing relationship with time."
   price:    ""
   note:     ""
   featured: false
-  url:      "#"
+  inactive: false
+  url:      "https://products.seonaidlee.com/products/courses/view/1171716" #Add the sales page for this product... but it needs to be built
 
 - title:    "The FOMO Fix"
   kind:     "~2-hour workshop"
   phase:    "Clear"
-  blurb:    "For overextended people-pleasers: learning to say a heartfelt no, and making real room for what you actually want to do."
+  blurb:    "For overextended people-pleasers: learn to say a heartfelt no, and make real room for what you actually want to do."
   price:    ""
   note:     ""
   featured: false
+  inactive: true
   url:      "#"
 
 - title:    "Speaking of Desire"
   kind:     "2-hour workshop + journaling"
   phase:    "Receive"
-  blurb:    "Clarify what you actually want and build the courage to ask for it directly — calibrating desire, finding the deeper need beneath the surface request, without the anxiety of rejection."
+  blurb:    "Clarify what you actually want and build the courage to ask for it directly — calibrate desire and find the deeper need beneath the surface request, without the anxiety of rejection."
   price:    "$77"
   note:     ""
   featured: false
+  inactive: false
   url:      "/sales/speaking-of-desire"
 
 - title:    "Nourished"
@@ -54,6 +60,7 @@
   price:    ""
   note:     ""
   featured: false
+  inactive: true
   url:      "#"
 
 - title:    "Better Than Abundance"
@@ -61,9 +68,10 @@
   phase:    "Steward"
   blurb:    "Locate the sustainable \"Enough\" between scarcity and abundance, and break the feast-or-famine cycle. Includes a centering practice, business fundamentals, journaling prompts, and a \"Know Your Numbers\" module on sustainable client load."
   price:    ""
-  note:     ""
+  note:     "This workshop is from a previous business, but it gets at a core problem that a lot of us have."
   featured: false
-  url:      "#"
+  inactive: false
+  url:      "https://products.seonaidlee.com/products/courses/view/1171871"
 
 - title:    "Resourced"
   kind:     "multi-week course"
@@ -72,6 +80,7 @@
   price:    ""
   note:     ""
   featured: false
+  inactive: true
   url:      "#"
 
 - title:    "Effective"
@@ -81,6 +90,7 @@
   price:    ""
   note:     ""
   featured: false
+  inactive: true
   url:      "#"
 
 - title:    "Yours to Do"
@@ -90,4 +100,5 @@
   price:    ""
   note:     "Meant to travel by hand — given after a real conversation, not pushed through a funnel."
   featured: false
+  inactive: true
   url:      "#"
