@@ -1,13 +1,23 @@
 # Program cards. Order in this file = display order in the masonry.
 # Accent color is derived from `phase` in layouts/partials/product-card.html —
 # do not add an accent field here.
-- title:    "The Soft Start"
-  kind:     "5-minute daily practice"
-  phase:    "Practice · Entry"
-  blurb:    "Short morning practices for Big Days — any day that asks you to show up as your best self. It deliberately doesn't rank your needs. The way in, catching you at your most honest, before the armor goes on."
-  price:    "$25–$50"
+- title:    "Should I?"
+  kind:     "Workbook"
+  phase:    "Clear · Entry"
+  blurb:    "A repeatable six step process to find out what is keeping you out of alignment."
+  price:    "$7"
   note:     ""
   featured: true
+  url:      "https://products.seonaidlee.com/products/courses/view/1193910"
+
+
+- title:    "The Soft Start"
+  kind:     "5-minute daily practice"
+  phase:    "Practice"
+  blurb:    "Short morning practices for Big Days — any day that asks you to show up as your best self. It deliberately doesn't rank your needs. The way in, catching you at your most honest, before the armor goes on."
+  price:    ""
+  note:     ""
+  featured: false
   url:      "#"
 
 - title:    "Spacious"
@@ -32,7 +42,7 @@
   kind:     "2-hour workshop + journaling"
   phase:    "Receive"
   blurb:    "Clarify what you actually want and build the courage to ask for it directly — calibrating desire, finding the deeper need beneath the surface request, without the anxiety of rejection."
-  price:    ""
+  price:    "$77"
   note:     ""
   featured: false
   url:      "/sales/speaking-of-desire"
@@ -76,7 +86,7 @@
 - title:    "Yours to Do"
   kind:     "ebook · the manifesto"
   phase:    "The book"
-  blurb:    "The manifesto underlying the whole suite. Contemplative wisdom literature, not a workbook — written to be read slowly and returned to."
+  blurb:    "The philosophy underlying the whole suite. Contemplative wisdom literature, not a workbook — written to be read slowly and returned to."
   price:    ""
   note:     "Meant to travel by hand — given after a real conversation, not pushed through a funnel."
   featured: false
