@@ -48,7 +48,7 @@ a:hover { color: var(--sw-link-hover); }
 .eyebrow {
   font-family: var(--sw-mono);
   font-weight: 500;
-  font-size: 11px;
+  font-size: 0.6875rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--sw-link);
