@@ -23,8 +23,20 @@
 {{ $subhead := $p.subhead | markdownify }}
 {{ $subhead = $subhead | replaceRE `^<p>([\s\S]*)</p>\s*$` "$1" }}
 
+{{/* hero_image is looked up the same two ways as sw-image: first as a Hugo
+  Page Resource under assets/ (resized if wider than 2000px, plus
+  fingerprinted caching), then as a plain file under static/. */}}
 {{ $heroSrc := $p.hero_image }}
-{{ $heroExists := and $heroSrc (os.FileExists (printf "static/%s" $heroSrc)) }}
+{{ $heroURL := "" }}
+{{ $heroImg := "" }}
+{{ if $heroSrc }}{{ $heroImg = resources.Get $heroSrc }}{{ end }}
+{{ if $heroImg }}
+  {{ if gt $heroImg.Width 2000 }}{{ $heroImg = $heroImg.Resize "2000x" }}{{ end }}
+  {{ $heroURL = $heroImg.RelPermalink }}
+{{ else if and $heroSrc (os.FileExists (printf "static/%s" $heroSrc)) }}
+  {{ $heroURL = $heroSrc | relURL }}
+{{ end }}
+{{ $heroExists := ne $heroURL "" }}
 
 <div class="sw-sales" style="{{ printf "--accent:%s;--accent-deep:%s" $accent $accentDeep | safeCSS }}">
 
@@ -45,7 +57,7 @@
   <div class="sw-sales__media sw-sales__media--hero">
     <div class="sw-sales__media-frame">
       {{ if $heroExists }}
-      <img src="{{ printf "/%s" $heroSrc | relURL }}" alt="{{ $p.hero_image_alt }}" loading="eager">
+      <img src="{{ $heroURL }}" alt="{{ $p.hero_image_alt }}" loading="eager">
       {{ else }}
       <div class="sw-image-placeholder">{{ $p.hero_image_alt }}</div>
       {{ end }}

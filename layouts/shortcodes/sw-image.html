@@ -1,9 +1,12 @@
 {{/* An inline image slot dropped into sales-page story prose — arbitrary count,
   arbitrary placement (including product mockups). Usage:
-  {{< sw-image src="img/sales/foo.jpg" alt="Descriptive alt / placeholder text" caption="Optional caption below the image" >}}
-  Real files go in static/img/sales/; until one exists this renders the site's
-  standard placeholder box, then switches to the real file automatically once
-  it's added — no markup change needed.
+  {{< sw-image src="images/foo.jpg" alt="Descriptive alt / placeholder text" caption="Optional caption below the image" >}}
+  src is looked up two ways, in order: first as a Hugo Page Resource under
+  assets/ (gets resized if wider than 1600px, plus fingerprinted caching —
+  preferred for new images), then as a plain file under static/ (for
+  existing content — e.g. src="img/sales/foo.jpg" checks static/img/sales/foo.jpg).
+  Until either exists this renders the site's standard placeholder box, then
+  switches to the real file automatically once one's added — no markup change needed.
 
   Optional text overlay — a tinted scrim across the whole image with the text
   centered on top, styled the same as sw-callout's pull-quote (size,
@@ -11,14 +14,23 @@
   Markdown emphasis), plus optional overlay_bg / overlay_color (any CSS
   color, including rgba()/hsla()/color-mix() — default is --sw-ink at 35%
   opacity behind --sw-surface text):
-  {{< sw-image src="img/sales/foo.jpg" alt="..." overlay_bg="rgba(20,18,15,.6)" overlay_color="#fff" >}}Your text here{{< /sw-image >}} */}}
+  {{< sw-image src="images/foo.jpg" alt="..." overlay_bg="rgba(20,18,15,.6)" overlay_color="#fff" >}}Your text here{{< /sw-image >}} */}}
 {{ $src := .Get "src" }}
-{{ $exists := and $src (os.FileExists (printf "static/%s" $src)) }}
+{{ $imgURL := "" }}
+{{ $img := "" }}
+{{ if $src }}{{ $img = resources.Get $src }}{{ end }}
+{{ if $img }}
+  {{ if gt $img.Width 1600 }}{{ $img = $img.Resize "1600x" }}{{ end }}
+  {{ $imgURL = $img.RelPermalink }}
+{{ else if and $src (os.FileExists (printf "static/%s" $src)) }}
+  {{ $imgURL = $src | relURL }}
+{{ end }}
+{{ $exists := ne $imgURL "" }}
 {{ $hasOverlay := ne (strings.TrimSpace .Inner) "" }}
 <div class="sw-sales__media sw-sales__media--inline">
   <div class="sw-sales__media-frame">
     {{ if $exists }}
-    <img src="{{ printf "/%s" $src | relURL }}" alt="{{ .Get "alt" }}" loading="lazy">
+    <img src="{{ $imgURL }}" alt="{{ .Get "alt" }}" loading="lazy">
     {{ else }}
     <div class="sw-image-placeholder">{{ .Get "alt" }}</div>
     {{ end }}
