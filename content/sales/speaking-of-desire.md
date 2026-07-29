@@ -26,27 +26,32 @@ faq:
 
 {{< sw-cta label="I already know I want this" >}}
 
-I went to a workshop years ago, and when the leader asked us to imagine something we wanted, I was stumped. Somewhere in becoming a responsible adult, I'd learned to ask myself, "Do I *need* that, or do I just *want* it?" — and to quietly dismiss the wanting.
-
-I can tell you, after running that strategy for about twenty years: it is not an effective way to navigate a life.
 
 {{< sw-subhead "01" >}}Desire is the sensation that keeps us moving forward{{< /sw-subhead >}}
 
-The goal of billions of years of evolution isn't for conscious, social beings to live at subsistence and talk themselves into being content with it. Plenty of what we want is genuinely good for us. Desire is a natural pull from the body asking for attention — how our systems regulate, feed, rest, connect, and search for meaning.
+I was in my thirties, with a house and children and a fairly complicated life, but when the workshop leader asked me what I wanted, I was stumped. I'd learned to ask myself, "Do I *need* that, or do I just *want* it?" — and to quietly dismiss the wanting. 
+
+This was a mistake. 
+
+I'd become so good at deferred gratification,  I forgot that "deferred" wasn't supposed to be "forever."
+
+The goal of billions of years of evolution isn't for conscious, social beings to live at a subsistence level and talk themselves into being content with it. 
+
+At its core, **desire is a natural pull from the body asking for attention** — it is how our nervous systems regulate themselves, find food, get adequate rest, make social connections, and search for meaning.
 
 > But — and this matters — it can also lead us astray.
 
 {{< sw-image src="img/sales/astray.png" alt="The meme with the guy looking at another woman">}}Definitely astray{{< /sw-image >}}
 
-We can get caught in habits and chase things for the wrong reasons. Our media and food environments encourage us to flood our bodies with temporary chemicals that mask uncomfortable truths.
+We can get caught in habits and chase things for the wrong reasons. Our media and food environments encourage us to flood our bodies with temporary chemicals that mask uncomfortable truths. 
 
-And many of the things we think we want are fundamentally about the ego and proving things about ourselves.
+And lots of the things we think we want are fundamentally about the ego and proving things.
 
-It’s hard to tease these sensations apart.
+It’s challenging to tease these sensations apart. It's not impossible, but it does take time and energy.
 
-But rather than learning the subtle embodiment skills that help distinguish healthy self-regulation from the ways it can go wrong, we get blanket warnings.
+Rather than teaching us the subtle embodiment skills that help distinguish healthy self-regulation from the ways it can go wrong, our culture gives us blanket warnings.
 
-We are told not to trust ourselves, to avoid desire, and to be satisfied with what we have. We learn to second-guess, to downplay our wants (and even needs), and we lose touch with the inborn capacity to feel our way towards fulfillment.
+We are told not to trust ourselves. We must learn to avoid desire, and to be satisfied with what we have. We learn to second-guess, to downplay our wants (and even our needs), and we lose touch with the **inborn capacity to feel our way towards fulfillment**.
 
 {{< sw-callout label="A permission slip" quote="Desire is the path not to dissolution, but to genuine flourishing — *if* we can learn to harness it." >}}
 What if you could tell the difference, deep in your body, between a yearning that should be heeded and an itch asking to be scratched? If you could trust that intuition — what might become possible?
