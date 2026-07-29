@@ -1,0 +1,14 @@
+{{/* FAQ accordion, reading the `faq` array ({q, a} pairs) from this page's own
+  front matter. Optional — only renders where/if this shortcode is called, so a
+  page with no FAQ simply omits it. Usage: {{< sw-faq >}} */}}
+<section class="sw-sales__faq">
+  <div class="sw-sales__section-label">{{ .Get "label" | default "Questions" }}</div>
+  <div class="sw-sales__faq-list">
+    {{ range .Page.Params.faq }}
+    <details class="sw-sales__faq-item">
+      <summary class="sw-sales__faq-q">{{ .q }}<span class="sw-sales__faq-marker">+</span></summary>
+      <p class="sw-sales__faq-a">{{ .a }}</p>
+    </details>
+    {{ end }}
+  </div>
+</section>

@@ -18,12 +18,10 @@
 {{ $showMark := ne $p.show_mark false }}
 {{ $spin := "" }}{{ if ne $p.ambient_motion false }}{{ $spin = "120s" }}{{ end }}
 
-{{/* Long prose lives in the Markdown body (the opening story + the reinforcement
-  section) so refining copy is just editing Markdown, never YAML. The one marker
-  splits the two chunks so the callout + CTA 2 can land between them. */}}
-{{ $bodyParts := split .Content "<!--reinforcement-->" }}
-{{ $openingStory := index $bodyParts 0 }}
-{{ $reinforcement := "" }}{{ if gt (len $bodyParts) 1 }}{{ $reinforcement = index $bodyParts 1 }}{{ end }}
+{{/* subhead supports Markdown emphasis; strip markdownify's own <p> wrapper since
+  it sits inside one already. */}}
+{{ $subhead := $p.subhead | markdownify }}
+{{ $subhead = $subhead | replaceRE `^<p>([\s\S]*)</p>\s*$` "$1" }}
 
 <div class="sw-sales" style="{{ printf "--accent:%s;--accent-deep:%s" $accent $accentDeep | safeCSS }}">
 
@@ -34,11 +32,11 @@
   </div>
   {{ end }}
 
-  <!-- ═══ HERO ═══ -->
+  <!-- ═══ HERO — fixed, exactly one per page ═══ -->
   <header class="sw-sales__hero">
     <div class="sw-sales__eyebrow">{{ $p.eyebrow }}</div>
     <h1 class="sw-sales__hook">{{ $p.hook }}</h1>
-    <p class="sw-sales__subhead">{{ $p.subhead | markdownify }}</p>
+    <p class="sw-sales__subhead">{{ $subhead | safeHTML }}</p>
   </header>
 
   <div class="sw-sales__media sw-sales__media--hero">
@@ -47,106 +45,13 @@
     </div>
   </div>
 
-  {{ range $p.ctas }}{{ if eq .after "hero" }}
-  {{ partial "sales/buy-cta.html" (dict "label" .label "sub" $p.buy_sub "price" $p.price "url" $p.buy_url) }}
-  {{ end }}{{ end }}
-
-  <!-- ═══ STORY ═══ -->
-  <section class="sw-sales__story">
-    {{ $openingStory | safeHTML }}
-  </section>
-
-  {{ range $p.ctas }}{{ if eq .after "story" }}
-  {{ partial "sales/buy-cta.html" (dict "label" .label "sub" $p.buy_sub "price" $p.price "url" $p.buy_url) }}
-  {{ end }}{{ end }}
-
-  <!-- ═══ PERMISSION-SLIP CALLOUT ═══ -->
-  <section class="sw-sales__callout">
-    <div class="sw-sales__callout-label">{{ $p.callout.label }}</div>
-    <p class="sw-sales__callout-quote">{{ $p.callout.quote | markdownify }}</p>
-    <p class="sw-sales__callout-body">{{ $p.callout.body }}</p>
-  </section>
-
-  {{ range $p.ctas }}{{ if eq .after "callout" }}
-  {{ partial "sales/buy-cta.html" (dict "label" .label "sub" $p.buy_sub "price" $p.price "url" $p.buy_url) }}
-  {{ end }}{{ end }}
-
-  <!-- ═══ REINFORCEMENT PROSE ═══ -->
-  <section class="sw-sales__story">
-    {{ $reinforcement | safeHTML }}
-  </section>
-
-  {{ range $p.ctas }}{{ if eq .after "reinforcement" }}
-  {{ partial "sales/buy-cta.html" (dict "label" .label "sub" $p.buy_sub "price" $p.price "url" $p.buy_url) }}
-  {{ end }}{{ end }}
-
-
-  <!-- ═══ WHAT YOU'LL PRACTICE ═══ -->
-  <section class="sw-sales__learn">
-    <div class="sw-sales__section-label">What you&rsquo;ll practice</div>
-    <h3 class="sw-sales__learn-title">{{ $p.learn_title }}</h3>
-    <p class="sw-sales__learn-intro">{{ $p.learn_intro }}</p>
-    <div class="sw-sales__learn-rows">
-      {{ range $i, $row := $p.learn }}
-      <div class="sw-sales__learn-row">
-        <div class="sw-sales__learn-num">0{{ add $i 1 }}</div>
-        <p class="sw-sales__learn-text"><strong>{{ $row.verb }}</strong> {{ $row.text }}</p>
-      </div>
-      {{ end }}
-    </div>
-  </section>
-
-  <div class="sw-sales__media sw-sales__media--inline">
-    <div class="sw-sales__media-frame">
-      <div class="sw-image-placeholder">{{ $p.learn_image.alt }}</div>
-    </div>
-    {{ with $p.learn_image.caption }}<p class="sw-sales__caption">{{ . }}</p>{{ end }}
+  <!-- ═══ BODY — everything else is authored as flowing Markdown + shortcodes:
+    sw-subhead, sw-image, sw-callout, sw-cta, sw-learn, sw-contrast, sw-box,
+    sw-testimonial, sw-faq, sw-final — in whatever order and quantity this page
+    needs. See layouts/shortcodes/. ═══ -->
+  <div class="sw-sales__body">
+    {{ .Content }}
   </div>
-
-  <!-- ═══ WHO IT'S FOR / NOT FOR ═══ -->
-  {{ partial "sales/for-not-for.html" . }}
-
-  {{ range $p.ctas }}{{ if eq .after "for-not-for" }}
-  {{ partial "sales/buy-cta.html" (dict "label" .label "sub" $p.buy_sub "price" $p.price "url" $p.buy_url) }}
-  {{ end }}{{ end }}
-
-  <!-- ═══ WHAT'S IN THE BOX ═══ -->
-  <section class="sw-sales__box">
-    <div class="sw-sales__section-label">What&rsquo;s included</div>
-    <h3 class="sw-sales__box-title">What&rsquo;s in the box</h3>
-    <p class="sw-sales__box-intro">{{ $p.box_intro }}</p>
-
-    <div class="sw-sales__box-label">Core meditations</div>
-    <ol class="sw-sales__box-modules">
-      {{ range $p.modules }}<li>{{ . }}</li>{{ end }}
-    </ol>
-
-    <div class="sw-sales__box-label">Bonuses</div>
-    <ul class="sw-sales__box-bonuses">
-      {{ range $p.bonuses }}<li>{{ . | markdownify }}</li>{{ end }}
-    </ul>
-  </section>
-
-  <!-- ═══ TESTIMONIAL ═══ -->
-  <section class="sw-sales__testimonial">
-    <div class="sw-sales__testimonial-mark">{{ partial "spiral-mark.html" (dict "size" 30 "stroke" "var(--accent)" "strokeWidth" 2.4) }}</div>
-    <blockquote class="sw-sales__testimonial-quote">&ldquo;{{ $p.testimonial.quote }}&rdquo;</blockquote>
-    <div class="sw-sales__testimonial-by">{{ $p.testimonial.by }}</div>
-  </section>
-
-  <!-- ═══ FAQ ═══ -->
-  <section class="sw-sales__faq">
-    <div class="sw-sales__section-label">Questions</div>
-    {{ partial "sales/faq.html" . }}
-  </section>
-
-  <!-- ═══ FINAL CTA — fixed ink/gold, never the phase accent (brief §5) ═══ -->
-  <section class="sw-sales__final">
-    <div class="sw-sales__final-mark">{{ partial "spiral-mark.html" (dict "size" 36 "stroke" "var(--sw-gold)" "strokeWidth" 2.4 "spin" $spin) }}</div>
-    <h3 class="sw-sales__final-title">{{ $p.final_cta.heading }}</h3>
-    <p class="sw-sales__final-body">{{ $p.final_cta.body }}</p>
-    {{ partial "sales/buy-cta.html" (dict "label" $p.final_cta.label "sub" $p.buy_sub "price" $p.price "url" $p.buy_url "gold" true) }}
-  </section>
 
   <!-- Minimal footer -->
   <footer class="sw-sales__footer">

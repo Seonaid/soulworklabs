@@ -1,0 +1,14 @@
+{{/* A numbered sequence of practice/step rows (e.g. "What you'll practice",
+  "Path to Clarity"). Optional, repeatable. Contains sw-learn-row calls. Usage:
+  {{< sw-learn label="What you'll practice" title="..." intro="Over the workshop..." >}}
+    {{< sw-learn-row verb="Calibrate" text="the sensations of different kinds of desire..." >}}
+    {{< sw-learn-row verb="Clarify" text="what you actually want..." >}}
+  {{< /sw-learn >}} */}}
+<section class="sw-sales__learn">
+  <div class="sw-sales__section-label">{{ .Get "label" }}</div>
+  <h3 class="sw-sales__learn-title">{{ .Get "title" }}</h3>
+  <p class="sw-sales__learn-intro">{{ .Get "intro" }}</p>
+  <div class="sw-sales__learn-rows">
+    {{ .Inner }}
+  </div>
+</section>

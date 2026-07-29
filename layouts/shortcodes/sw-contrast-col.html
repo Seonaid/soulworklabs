@@ -1,0 +1,8 @@
+{{/* One column inside sw-contrast.html. tone="not" applies the muted/warning
+  styling; omit for the affirming column. Inner content is a plain Markdown bullet
+  list. Usage: see sw-contrast.html. */}}
+{{ $not := eq (.Get "tone") "not" }}
+<div class="sw-sales__fornot-col{{ if $not }} sw-sales__fornot-col--not{{ else }} sw-sales__fornot-col--for{{ end }}">
+  <div class="sw-sales__fornot-label{{ if $not }} sw-sales__fornot-label--not{{ end }}">{{ .Get "label" }}</div>
+  {{ .Inner | markdownify }}
+</div>

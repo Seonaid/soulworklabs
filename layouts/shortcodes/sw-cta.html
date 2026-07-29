@@ -1,0 +1,6 @@
+{{/* Buy-button CTA — drop anywhere in the body, any number of times, each with its
+  own label. Price, buy_url, and sub-line come from this page's own front matter
+  (single source of truth per page — see partials/sales/buy-cta.html).
+  Usage: {{< sw-cta label="Begin the workshop" >}} */}}
+{{ $p := .Page.Params }}
+{{ partial "sales/buy-cta.html" (dict "label" (.Get "label") "sub" $p.buy_sub "price" $p.price "url" $p.buy_url) }}

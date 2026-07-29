@@ -15,70 +15,21 @@ buy_url:    "https://products.seonaidlee.com/products/courses/view/1160015?actio
 buy_sub:    "Self-paced · lifetime access"
 
 hero_image_alt: "Hero image — the opening, evocative photograph (a hammock, perhaps?)"
-
-# Repeated Buy buttons — one entry per placement, in document order.
-# 'after' matches a fixed insertion point in layouts/sales/single.html.
-ctas:
-  - { label: "Relieve Your FOMO Today",                       after: "story" }
-  - { label: "I Want to Enjoy More Without Burning Out",        after: "reinforcement" }
-  - { label: "Yes — this is for me",                     after: "for-not-for" }
-
-callout:
-  label: "It's not the phone"
-  quote: "Social media might make it worse, but it's not the root cause, and it's not the core remedy."
-  body:  "Belonging and being left out was one of the main themes in Jane Austen's work. It was in Shakespeare. It was probably happening in the caves when somebody was afraid that the rest of the tribe was going berry picking without them."
-
-learn_title: "A sequence of contemplations to come into right relationship with wanting"
-learn_intro: "Over the workshop I walk you through practices that let you:"
-learn:
-  - { verb: "Calibrate", text: "the sensations of different kinds of desire in your body, so you can feel the difference rather than guess at it." }
-  - { verb: "Clarify",   text: "what you actually want — unpack the layers, and get precise about why you want a particular thing." }
-  - { verb: "Ask",       text: "— build the courage to request what you really want, even when you don't yet know the answer, and work with the discomfort of hearing \"no\" (and the surprise of fearing \"yes\")." }
-
-learn_image:
-  alt:     "Inline image — 'a glass of water on a hot day': a clear, unambiguous desire"
-  caption: "We start slowly — a glass of water on a hot day — a clear, obviously beneficial desire, before working up to the bigger questions."
-
-for_you:
-  - "Your life is basically OK — you've got some ducks. Not in a row, but there are definitely ducks. And you sense there's something more, bigger, juicier available."
-  - "You have people who'd gladly support you more — if only you were willing to accept it."
-  - "You're relatively well-resourced and find yourself blocking support, rather than just barely holding on."
-not_for_you:
-  - "You're in the middle of chaos or turmoil. Settle your nervous system first — gently approaching desire while trapped or stuck can stir up a lot."
-  - "You're hoping this will fix loneliness or social isolation. It won't."
-  - "You want to learn to get people to give you what you want. This is about clarity between ego and heart — any \"player\" approach isn't my scene."
-risk_note: "Like all meditation practice, this can surface things. I'm not present to help you regulate or debrief — if you're struggling with bigger things, please work with a well-established therapist instead."
-
-box_intro: "The workshop is broken into separate guided meditations, each with prompts to help you process what you find. Watch them in a single afternoon, or return to them over time as the practices integrate. Access lasts as long as I offer it — including any upgrades."
-modules:
-  - "Learning to Trust Desire"
-  - "Sensing Different Textures"
-  - "Untangling the Threads"
-  - "Summoning the Courage to Ask for What You Want"
-bonuses:
-  - "Bonus module — **The Weight of Other People's Expectations**."
-  - "Bonus module — **Maslow, Manifestation, and the Draw to Wholeness** (free to preview, if you'd like a feel for the teaching first)."
-  - "A **16-page journal** with prompts to deepen your contemplation at every stage."
-
-testimonial:
-  quote: "That was way deeper than I expected from a workshop this short. I came out knowing something I'd been pretending not to know for years — and the words to finally say it."
-  by:    "A past participant"
-
-faq:
-  - { q: "Is this live or self-paced?", a: "Entirely self-paced. It's designed to be done in a single afternoon, though many people prefer to sit with each component for a few days and let it integrate before moving on." }
-  - { q: "How long do I have access?", a: "For as long as I continue to offer the workshop — including any upgrades I add later, like audio-only versions of the meditations and transcripts." }
-  - { q: "Do I have to start with my big life questions?", a: "No — please don't. We start small and unambiguous, like a glass of water on a hot day, and build up. The practice works on everything from everyday wants to the questions you've been avoiding for years." }
-  - { q: "Can I preview the teaching before I buy?", a: "Yes. The bonus module Maslow, Manifestation, and the Draw to Wholeness is available to preview for free, no signup required, so you can get a feel for the tone." }
-
-final_cta:
-  heading: "Get started today"
-  body:    "This is one of my very favourite projects. I hope it helps you toward a more, better, juicier life — one that delivers what you actually want."
-  label:   "Enroll in Speaking of Desire"
 ---
 
+*For anxious people-pleasers, dopamine seekers, and anyone who needs a day to recover from their weekend.*
 
+**You might need this if:**
 
-{{< sw-subhead "01" >}}FOMO isn't actually the fear of missing out.{{< /sw-subhead >}}
+- You have overlapping social engagements (27 Dresses, anyone?)
+- You pack so much into your vacation days that you need to lie down to recover
+- There's a nagging background sense that somebody, somewhere, is having a good time *without you*
+
+If you've ever found yourself staring at a calendar full of events you really think you should be looking forward to — but feeling dread instead of anticipation — you aren't alone.
+
+You're not a terrible person for wanting to skip out on Great-Aunt-Sandra's daughter-in-law's second baby shower so you can take a nap.
+
+FOMO isn't fear of missing out.
 
 It's fear of making the wrong choice.
 
@@ -90,12 +41,7 @@ It's fear of making the wrong choice.
 
 The FOMO Fix helps you make decisions you feel good about — so you can stop living in constant second-guessing and start creating a life that actually feels calm, aligned, and fully yours.
 
-
-{{< sw-image src="img/sales/sod-story-1.jpg" alt="Inline image — 'astray': a winding path, a distraction" >}}
-
-We get caught in habits and chase things for the wrong reasons. Our food and media environments coax us to flood the body with quick chemicals that mask uncomfortable truths, and a lot of what we think we want is really the ego, proving something about us. It's hard to tease these sensations apart — and instead of learning the subtle embodiment skills that tell healthy self-regulation from its distortions, we get blanket warnings: don't trust yourself, avoid desire, be satisfied with what you have.
-
-<!--reinforcement-->
+{{< sw-cta label="Reduce Your FOMO Today" >}}
 
 Hi! I'm Seonaid, creator of The FOMO Fix, and a recovering Yes-a-holic.
 
@@ -119,26 +65,67 @@ With The FOMO Fix in place, you can still *do* lots of stuff. Possibly more than
 
 But it will be chosen more intentionally.
 
-<!--this is not-->
+{{< sw-cta label="I Want to Enjoy More Without Burning Out" >}}
 
-### What if I say no and people stop inviting me?
+{{< sw-subhead "02" >}}What if I say no and people stop inviting me?{{< /sw-subhead >}}
 
 This is the fear underneath most of the others, so let's meet it directly.
 
 A heartfelt no, delivered with warmth and clarity, tends to do far less damage to a relationship than showing up resentful, distracted, or already halfway out the door. Most people respect honesty more than they resent a boundary. And the people who don't respect it? That's useful information too — about them, not about whether you were allowed to say no.
 
-The FOMO Fix will not encourage you to:
+{{< sw-contrast >}}
+{{< sw-contrast-col label="The FOMO Fix will not encourage you to" tone="not" >}}
 - Cancel all your plans
 - Alienate your friends
 - Become a different person, or
 - Miss out on the stuff that's *really* important to you
-
-By learning the practices in this workshop, you can reclaim control of your days. And without FOMO driving your decisions, your life can calmly and intentionally include:
-
+{{< /sw-contrast-col >}}
+{{< sw-contrast-col label="Your life can calmly and intentionally include" >}}
 - Time with friends and family
 - Satisfying work
 - Interesting hobbies
 - Travel
 - Rest!
+{{< /sw-contrast-col >}}
+{{< /sw-contrast >}}
 
 Even if you have a high need for stimulation, clearing this fear and replacing it with discernment lets you live a high-speed life that's exciting on its own terms — rather than driven by a sense of time slipping away.
+
+{{< sw-learn label="Path to Clarity" title="Here's the Path to Clarity in The FOMO Fix" >}}
+{{< sw-learn-row verb="Identify" >}}what's actually driving your FOMO — this might surprise you!{{< /sw-learn-row >}}
+{{< sw-learn-row verb="Pause" >}}— learn to make intentional decisions instead of reactive ones, even when you're afraid of missing out.{{< /sw-learn-row >}}
+{{< sw-learn-row verb="Build" >}}simple habits that keep your schedule aligned with what actually matters.{{< /sw-learn-row >}}
+{{< /sw-learn >}}
+
+*Imagine how good it could feel to just drink your coffee without anything lurking in the back of your mind.*
+
+{{< sw-cta label="I'm Ready to Fix This FOMO Now!" >}}
+
+**What you get inside The FOMO Fix**
+
+- Become crystal clear on exactly what's driving your FOMO (so you can stop reacting to it)
+- Feel confident saying no — without guilt or over-explaining
+- Make decisions about your time quickly and clearly by learning how to incorporate Pause Points
+- Stop overcommitting and start enjoying what you actually choose to do
+
+{{< sw-subhead "03" >}}But what if this is just Who I Am?{{< /sw-subhead >}}
+
+The Fear of Missing Out is different from the desire for a rich and fulfilling life.
+
+FOMO isn't really driven by fun or pleasure.
+
+Instead, it's driven by:
+
+- People-pleasing, or an underlying fear of rejection
+- A deeper desire for impact, but without a sense of what would constitute "enough"
+- An overdeveloped awareness of time
+
+**In fact, FOMO can make our lives so frantic that we stop enjoying the very things we feel compelled to do.**
+
+If you are exhausted at the end of a weekend of running from one place to another... or you overextend yourself at work with Just One More Project... or you find yourself volunteering to run an errand for a friend in the middle of a day that you were already stretched too thin...
+
+The FOMO Fix can help you find your way to a new sense of balance, so you can have a fulfilling life without fear.
+
+{{< sw-final heading="Ready to fix your FOMO?" label="Enroll in The FOMO Fix" >}}
+This workshop can help you come to terms with the fear(s) that have been driving your overstuffed schedule, and let you move into a more heartfelt relationship with time and responsibilities. If you're ready to face that discomfort before it comes to a crisis, The FOMO Fix is designed to help you learn to love the word No… which makes every Yes a little more precious.
+{{< /sw-final >}}

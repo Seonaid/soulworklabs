@@ -1,0 +1,11 @@
+{{/* Permission-slip style pull-quote callout. Optional, repeatable. Usage:
+  {{< sw-callout label="A permission slip" quote="Desire is the path *not* to dissolution, but to genuine flourishing." >}}
+    What if you could tell the difference, deep in your body...
+  {{< /sw-callout >}} */}}
+{{ $quote := .Get "quote" | markdownify }}
+{{ $quote = $quote | replaceRE `^<p>([\s\S]*)</p>\s*$` "$1" }}
+<section class="sw-sales__callout">
+  <div class="sw-sales__callout-label">{{ .Get "label" }}</div>
+  <p class="sw-sales__callout-quote">{{ $quote | safeHTML }}</p>
+  <p class="sw-sales__callout-body">{{ .Inner }}</p>
+</section>

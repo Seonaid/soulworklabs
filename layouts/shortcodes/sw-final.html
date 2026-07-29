@@ -1,0 +1,14 @@
+{{/* Closing CTA panel — fixed ink/gold across every phase, never the page's
+  accent color (see original brief §5). Optional — a free-workshop page with no
+  buy CTA simply omits it. Usage:
+  {{< sw-final heading="Get started today" label="Enroll in Speaking of Desire" >}}
+    This is one of my very favourite projects...
+  {{< /sw-final >}} */}}
+{{ $p := .Page.Params }}
+{{ $spin := "" }}{{ if ne $p.ambient_motion false }}{{ $spin = "120s" }}{{ end }}
+<section class="sw-sales__final">
+  <div class="sw-sales__final-mark">{{ partial "spiral-mark.html" (dict "size" 36 "stroke" "var(--sw-gold)" "strokeWidth" 2.4 "spin" $spin) }}</div>
+  <h3 class="sw-sales__final-title">{{ .Get "heading" }}</h3>
+  <p class="sw-sales__final-body">{{ .Inner }}</p>
+  {{ partial "sales/buy-cta.html" (dict "label" (.Get "label") "sub" $p.buy_sub "price" $p.price "url" $p.buy_url "gold" true) }}
+</section>

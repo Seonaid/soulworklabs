@@ -1,0 +1,11 @@
+{{/* One numbered row inside sw-learn.html. Numbering (01, 02, ...) is automatic,
+  based on this shortcode's occurrence count on the page. Body text is Inner
+  content (not an attribute) so it can freely contain quote marks/apostrophes.
+  Usage: {{< sw-learn-row verb="Calibrate" >}}the sensations of different kinds of desire...{{< /sw-learn-row >}} */}}
+{{ $num := add .Ordinal 1 }}
+{{ $text := .Inner | markdownify }}
+{{ $text = $text | replaceRE `^<p>([\s\S]*)</p>\s*$` "$1" }}
+<div class="sw-sales__learn-row">
+  <div class="sw-sales__learn-num">0{{ $num }}</div>
+  <p class="sw-sales__learn-text"><strong>{{ .Get "verb" }}</strong> {{ $text | safeHTML }}</p>
+</div>

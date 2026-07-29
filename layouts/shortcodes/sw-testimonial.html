@@ -1,0 +1,8 @@
+{{/* A single quote + attribution. Optional, repeatable — drop it as many times
+  as needed. Usage:
+  {{< sw-testimonial by="A past participant" >}}That was way deeper than I expected...{{< /sw-testimonial >}} */}}
+<section class="sw-sales__testimonial">
+  <div class="sw-sales__testimonial-mark">{{ partial "spiral-mark.html" (dict "size" 30 "stroke" "var(--accent)" "strokeWidth" 2.4) }}</div>
+  <blockquote class="sw-sales__testimonial-quote">&ldquo;{{ .Inner }}&rdquo;</blockquote>
+  <div class="sw-sales__testimonial-by">{{ .Get "by" }}</div>
+</section>
