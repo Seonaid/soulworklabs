@@ -14,6 +14,7 @@ price:      "$27"
 buy_url:    "https://products.seonaidlee.com/products/courses/view/1160015?action=signup"
 buy_sub:    "Self-paced · lifetime access"
 
+hero_image:     ""
 hero_image_alt: "Hero image — the opening, evocative photograph (a hammock, perhaps?)"
 ---
 
@@ -27,21 +28,25 @@ hero_image_alt: "Hero image — the opening, evocative photograph (a hammock, pe
 
 If you've ever found yourself staring at a calendar full of events you really think you should be looking forward to — but feeling dread instead of anticipation — you aren't alone.
 
-You're not a terrible person for wanting to skip out on Great-Aunt-Sandra's daughter-in-law's second baby shower so you can take a nap.
+> You're not a terrible person for wanting to skip out on Great-Aunt-Sandra's daughter-in-law's second baby shower so you can take a nap.
 
-FOMO isn't fear of missing out.
+
+{{< sw-subhead "01" >}}FOMO isn't fear of missing out.{{< /sw-subhead >}}
+
 
 It's fear of making the wrong choice.
 
-**Because if you choose one thing… you're letting go of everything else.**
+**Because when you choose one thing… you're letting go of everything else.**
 
 **So instead of choosing—you try to do it all.**
 
-> And that's what's actually exhausting you.
+And that's what's actually exhausting you.
 
 The FOMO Fix helps you make decisions you feel good about — so you can stop living in constant second-guessing and start creating a life that actually feels calm, aligned, and fully yours.
 
 {{< sw-cta label="Reduce Your FOMO Today" >}}
+
+{{< sw-image src="img/sales/LEE_Seonaid-10094.jpg" alt="Blond woman in a burgundy casual top in front of a grey background with glasses on her head smiling into the camera" >}}
 
 Hi! I'm Seonaid, creator of The FOMO Fix, and a recovering Yes-a-holic.
 
@@ -57,13 +62,20 @@ Like… all of us. Not all at once, but we fell like dominoes through our thirti
 
 And after seeing it happen enough, and seeing it happen to myself, I started being able to see the triggers and catch them before the cycle started again.
 
-Here's the thing I see:
+<!-- Here's the thing I see:
 
 **The fear of missing out doesn't really come from looking at what other people are doing — that's just a symptom. It comes from deeper things that we believe about ourselves, and our roles in the world, and time.**
 
 With The FOMO Fix in place, you can still *do* lots of stuff. Possibly more than other people think is sensible.
 
+But it will be chosen more intentionally. -->
+
+{{< sw-callout label="It's not about the phone" quote="The fear of missing out doesn't really come from looking at what other people are doing — that's just a symptom. It comes from deeper things that we believe about ourselves, and our roles in the world, and time." >}}
+With The FOMO Fix in place, you can still *do* lots of stuff. Possibly more than other people think is sensible.
+
 But it will be chosen more intentionally.
+{{< /sw-callout >}}
+
 
 {{< sw-cta label="I Want to Enjoy More Without Burning Out" >}}
 

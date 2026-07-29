@@ -23,6 +23,9 @@
 {{ $subhead := $p.subhead | markdownify }}
 {{ $subhead = $subhead | replaceRE `^<p>([\s\S]*)</p>\s*$` "$1" }}
 
+{{ $heroSrc := $p.hero_image }}
+{{ $heroExists := and $heroSrc (os.FileExists (printf "static/%s" $heroSrc)) }}
+
 <div class="sw-sales" style="{{ printf "--accent:%s;--accent-deep:%s" $accent $accentDeep | safeCSS }}">
 
   {{ if $showMark }}
@@ -41,7 +44,11 @@
 
   <div class="sw-sales__media sw-sales__media--hero">
     <div class="sw-sales__media-frame">
+      {{ if $heroExists }}
+      <img src="{{ printf "/%s" $heroSrc | relURL }}" alt="{{ $p.hero_image_alt }}" loading="eager">
+      {{ else }}
       <div class="sw-image-placeholder">{{ $p.hero_image_alt }}</div>
+      {{ end }}
     </div>
   </div>
 

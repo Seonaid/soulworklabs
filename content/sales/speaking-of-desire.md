@@ -14,6 +14,7 @@ price:      "$77"
 buy_url:    "https://products.seonaidlee.com/products/courses/view/1026912/?action=signup"
 buy_sub:    "Self-paced · lifetime access"
 
+hero_image:     "img/sales/harold-wijnholds-e162aG538_k-unsplash-2.jpg"
 hero_image_alt: "Hero image — the opening, evocative photograph (glasses of water, an open hand, light)"
 
 faq:

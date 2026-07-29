@@ -2,10 +2,17 @@
   arbitrary placement (including product mockups). Usage:
   {{< sw-image src="img/sales/foo.jpg" alt="Descriptive alt / placeholder text" caption="Optional caption below the image" >}}
   Real files go in static/img/sales/; until one exists this renders the site's
-  standard placeholder box. */}}
+  standard placeholder box, then switches to the real file automatically once
+  it's added — no markup change needed. */}}
+{{ $src := .Get "src" }}
+{{ $exists := and $src (os.FileExists (printf "static/%s" $src)) }}
 <div class="sw-sales__media sw-sales__media--inline">
   <div class="sw-sales__media-frame">
+    {{ if $exists }}
+    <img src="{{ printf "/%s" $src | relURL }}" alt="{{ .Get "alt" }}" loading="lazy">
+    {{ else }}
     <div class="sw-image-placeholder">{{ .Get "alt" }}</div>
+    {{ end }}
   </div>
   {{ with .Get "caption" }}<p class="sw-sales__caption">{{ . }}</p>{{ end }}
 </div>
