@@ -3,15 +3,31 @@
   {{< sw-image src="img/sales/foo.jpg" alt="Descriptive alt / placeholder text" caption="Optional caption below the image" >}}
   Real files go in static/img/sales/; until one exists this renders the site's
   standard placeholder box, then switches to the real file automatically once
-  it's added — no markup change needed. */}}
+  it's added — no markup change needed.
+
+  Optional text overlay — a tinted scrim across the whole image with the text
+  centered on top, styled the same as sw-callout's pull-quote (size,
+  centering, italics). Add a closing tag with Inner content (supports
+  Markdown emphasis), plus optional overlay_bg / overlay_color (any CSS
+  color, including rgba()/hsla()/color-mix() — default is --sw-ink at 35%
+  opacity behind --sw-surface text):
+  {{< sw-image src="img/sales/foo.jpg" alt="..." overlay_bg="rgba(20,18,15,.6)" overlay_color="#fff" >}}Your text here{{< /sw-image >}} */}}
 {{ $src := .Get "src" }}
 {{ $exists := and $src (os.FileExists (printf "static/%s" $src)) }}
+{{ $hasOverlay := ne (strings.TrimSpace .Inner) "" }}
 <div class="sw-sales__media sw-sales__media--inline">
   <div class="sw-sales__media-frame">
     {{ if $exists }}
     <img src="{{ printf "/%s" $src | relURL }}" alt="{{ .Get "alt" }}" loading="lazy">
     {{ else }}
     <div class="sw-image-placeholder">{{ .Get "alt" }}</div>
+    {{ end }}
+    {{ if $hasOverlay }}
+    {{ $overlayBg := .Get "overlay_bg" | default "color-mix(in srgb, var(--sw-ink) 35%, transparent)" }}
+    {{ $overlayColor := .Get "overlay_color" | default "var(--sw-surface)" }}
+    <div class="sw-sales__media-overlay" style="{{ printf "background:%s;color:%s" $overlayBg $overlayColor | safeCSS }}">
+      {{ .Inner | markdownify }}
+    </div>
     {{ end }}
   </div>
   {{ with .Get "caption" }}<p class="sw-sales__caption">{{ . }}</p>{{ end }}
