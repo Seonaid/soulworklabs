@@ -15,5 +15,7 @@
   <div class="sw-sales__section-label">{{ .Get "label" }}</div>
   <h3 class="sw-sales__box-title">{{ .Get "title" }}</h3>
   <p class="sw-sales__box-intro">{{ .Get "intro" }}</p>
-  {{ .Inner }}
+  <div class="sw-sales__box-groups">
+    {{ .Inner }}
+  </div>
 </section>

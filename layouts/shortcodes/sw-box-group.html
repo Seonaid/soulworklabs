@@ -1,5 +1,8 @@
-{{/* One labeled sub-list inside sw-box.html. Write "1. ..." for a numbered list
+{{/* One labeled sub-list inside sw-box.html — rendered as its own --sw-surface
+  card, matching sw-learn's row treatment. Write "1. ..." for a numbered list
   (e.g. core modules) or "- ..." for a bulleted list (e.g. bonuses) — Markdown
   decides which you get, styled distinctly via CSS. Usage: see sw-box.html. */}}
-<div class="sw-sales__box-label">{{ .Get "label" }}</div>
-<div class="sw-sales__box-list">{{ .Inner | markdownify }}</div>
+<div class="sw-sales__box-group">
+  <div class="sw-sales__box-label">{{ .Get "label" }}</div>
+  <div class="sw-sales__box-list">{{ .Inner | markdownify }}</div>
+</div>
