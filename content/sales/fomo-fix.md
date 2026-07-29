@@ -28,10 +28,13 @@ hero_image_alt: "Hero image — the opening, evocative photograph (a hammock, pe
 
 If you've ever found yourself staring at a calendar full of events you really think you should be looking forward to — but feeling dread instead of anticipation — you aren't alone.
 
-> You're not a terrible person for wanting to skip out on Great-Aunt-Sandra's daughter-in-law's second baby shower so you can take a nap.
+> Psst... You're not a terrible person for wanting to skip out on Great-Aunt-Sandra's daughter-in-law's second baby shower so you can take a nap.
 
+&nbsp;
 
-{{< sw-subhead "01" >}}FOMO isn't fear of missing out.{{< /sw-subhead >}}
+{{< sw-cta label="Reduce Your FOMO Today" >}}
+
+{{< sw-subhead "01" >}}FOMO isn't really the fear of missing out.{{< /sw-subhead >}}
 
 
 It's fear of making the wrong choice.
@@ -44,9 +47,7 @@ And that's what's actually exhausting you.
 
 The FOMO Fix helps you make decisions you feel good about — so you can stop living in constant second-guessing and start creating a life that actually feels calm, aligned, and fully yours.
 
-{{< sw-cta label="Reduce Your FOMO Today" >}}
-
-{{< sw-image src="img/sales/LEE_Seonaid-10094.jpg" alt="Blond woman in a burgundy casual top in front of a grey background with glasses on her head smiling into the camera" >}}
+{{< sw-image src="img/sales/LEE_Seonaid-10094.jpg" alt="Blond woman in a burgundy casual top in front of a grey background with glasses on her head smiling into the camera" />}}
 
 Hi! I'm Seonaid, creator of The FOMO Fix, and a recovering Yes-a-holic.
 
