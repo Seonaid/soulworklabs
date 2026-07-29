@@ -56,6 +56,10 @@
     {{ $openingStory | safeHTML }}
   </section>
 
+  {{ range $p.ctas }}{{ if eq .after "story" }}
+  {{ partial "sales/buy-cta.html" (dict "label" .label "sub" $p.buy_sub "price" $p.price "url" $p.buy_url) }}
+  {{ end }}{{ end }}
+
   <!-- ═══ PERMISSION-SLIP CALLOUT ═══ -->
   <section class="sw-sales__callout">
     <div class="sw-sales__callout-label">{{ $p.callout.label }}</div>
@@ -71,6 +75,11 @@
   <section class="sw-sales__story">
     {{ $reinforcement | safeHTML }}
   </section>
+
+  {{ range $p.ctas }}{{ if eq .after "reinforcement" }}
+  {{ partial "sales/buy-cta.html" (dict "label" .label "sub" $p.buy_sub "price" $p.price "url" $p.buy_url) }}
+  {{ end }}{{ end }}
+
 
   <!-- ═══ WHAT YOU'LL PRACTICE ═══ -->
   <section class="sw-sales__learn">
