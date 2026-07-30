@@ -8,7 +8,7 @@ build:
 
 eyebrow:    "A self-paced workshop · The Clear arc"
 hook:       "Ready to free yourself from the fear of missing out?"
-subhead:    "Raise your standards on how you spend your time without guilt or anxiety — even if you're worried about seeming rude or missing something important."
+subhead:    "Raise the standards on how you spend your time... Even if you're worried about missing something important or seeming rude."
 
 price:      "$27"
 buy_url:    "https://products.seonaidlee.com/products/courses/view/1160015?action=signup"
@@ -21,7 +21,7 @@ show_title:     true
 
 *For anxious people-pleasers, dopamine seekers, and anyone who needs a day to recover from their weekend.*
 
-If you've ever found yourself staring at a calendar full of events you really think you should be looking forward to — but feeling dread instead of anticipation — you aren't alone.
+If you've ever found yourself **staring at a calendar full of events you should be looking forward to**, but feeling dread instead of anticipation, you aren't alone. 
 
 **You might need this if:**
 
