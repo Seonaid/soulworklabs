@@ -24,8 +24,8 @@
 .sw-sales__media-overlay p{margin:0}
 .sw-sales__media-overlay em{font-style:italic;opacity:.85}
 .sw-sales__media-overlay.sw-sales__media-overlay--hero-title{font:400 clamp(2.8125rem,7.5vw,5.4375rem)/1.05 var(--sw-serif);letter-spacing:-.015em}
-.sw-sales__media--hero .sw-sales__media-frame{height:clamp(240px,42vw,500px)}
-.sw-sales__media--inline .sw-sales__media-frame{height:clamp(200px,34vw,400px)}
+.sw-sales__media--hero .sw-sales__media-frame{aspect-ratio:1180/500}
+.sw-sales__media--inline .sw-sales__media-frame{aspect-ratio:820/400}
 .sw-sales__caption{margin:12px 2px 0;font:italic 400 0.875rem/1.4 var(--sw-serif);color:var(--sw-body)}
 
 /* CTA (buy-cta partial) */

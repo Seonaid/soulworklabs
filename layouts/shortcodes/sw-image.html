@@ -14,7 +14,14 @@
   Markdown emphasis), plus optional overlay_bg / overlay_color (any CSS
   color, including rgba()/hsla()/color-mix() — default is --sw-ink at 35%
   opacity behind --sw-surface text):
-  {{< sw-image src="images/foo.jpg" alt="..." overlay_bg="rgba(20,18,15,.6)" overlay_color="#fff" >}}Your text here{{< /sw-image >}} */}}
+  {{< sw-image src="images/foo.jpg" alt="..." overlay_bg="rgba(20,18,15,.6)" overlay_color="#fff" >}}Your text here{{< /sw-image >}}
+
+  Frame shape defaults to a fixed 820/400 (roughly 2:1) landscape ratio via
+  CSS aspect-ratio, so it never distorts or crops differently at different
+  viewport widths. Override for a product mockup that needs its own constant
+  shape (a screenshot, an ebook cover, a device frame — anything where the
+  proportions matter and shouldn't drift):
+  {{< sw-image src="images/mockup.png" alt="..." ratio="1/1" >}} */}}
 {{ $src := .Get "src" }}
 {{ $imgURL := "" }}
 {{ $img := "" }}
@@ -28,7 +35,7 @@
 {{ $exists := ne $imgURL "" }}
 {{ $hasOverlay := ne (strings.TrimSpace .Inner) "" }}
 <div class="sw-sales__media sw-sales__media--inline">
-  <div class="sw-sales__media-frame">
+  <div class="sw-sales__media-frame"{{ with .Get "ratio" }} style="{{ printf "aspect-ratio:%s" . | safeCSS }}"{{ end }}>
     {{ if $exists }}
     <img src="{{ $imgURL }}" alt="{{ .Get "alt" }}" loading="lazy">
     {{ else }}
