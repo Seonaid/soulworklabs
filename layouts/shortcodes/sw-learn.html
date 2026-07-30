@@ -1,14 +1,16 @@
 {{/* A numbered sequence of practice/step rows (e.g. "What you'll practice",
-  "Path to Clarity"). Optional, repeatable. Contains sw-learn-row calls. Usage:
-  {{< sw-learn label="What you'll practice" title="..." intro="Over the workshop..." >}}
-    {{< sw-learn-row verb="Calibrate" text="the sensations of different kinds of desire..." >}}
-    {{< sw-learn-row verb="Clarify" text="what you actually want..." >}}
+  "Path to Clarity"). Optional, repeatable. Any intro copy is just plain
+  Markdown text written before the first sw-learn-row call — no intro param.
+  Usage:
+  {{< sw-learn label="What you'll practice" title="..." bottom_text="Optional plain-text note, centered below the rows." >}}
+    Over the workshop I walk you through practices that let you:
+
+    {{< sw-learn-row verb="Calibrate" >}}the sensations of different kinds of desire...{{< /sw-learn-row >}}
+    {{< sw-learn-row verb="Clarify" >}}what you actually want...{{< /sw-learn-row >}}
   {{< /sw-learn >}} */}}
 <section class="sw-sales__learn">
   <div class="sw-sales__section-label">{{ .Get "label" }}</div>
   <h3 class="sw-sales__learn-title">{{ .Get "title" }}</h3>
-  <p class="sw-sales__learn-intro">{{ .Get "intro" }}</p>
-  <div class="sw-sales__learn-rows">
-    {{ .Inner }}
-  </div>
+  {{ .Inner | markdownify }}
+  {{ with .Get "bottom_text" }}<p class="sw-sales__bottom-text">{{ . }}</p>{{ end }}
 </section>

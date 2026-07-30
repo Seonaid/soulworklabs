@@ -1,8 +1,11 @@
 {{/* "What's in the box" style block, holding an arbitrary number of labeled
   sub-lists (sw-box-group calls) rather than a fixed modules+bonuses pair — needed
   for curriculum breakdowns with several categories (trainings, templates,
-  meditations, bonuses...). Optional. Usage:
-  {{< sw-box label="What's included" title="What's in the box" intro="..." >}}
+  meditations, bonuses...). Optional. Any intro copy is just plain Markdown
+  text written before the first sw-box-group call — no intro param. Usage:
+  {{< sw-box label="What's included" title="What's in the box" bottom_text="Optional plain-text note, centered below the groups." >}}
+    The workshop is broken into separate guided meditations...
+
     {{< sw-box-group label="Core meditations" >}}
     1. Learning to Trust Desire
     2. Sensing Different Textures
@@ -14,8 +17,6 @@
 <section class="sw-sales__box">
   <div class="sw-sales__section-label">{{ .Get "label" }}</div>
   <h3 class="sw-sales__box-title">{{ .Get "title" }}</h3>
-  <p class="sw-sales__box-intro">{{ .Get "intro" }}</p>
-  <div class="sw-sales__box-groups">
-    {{ .Inner }}
-  </div>
+  {{ .Inner | markdownify }}
+  {{ with .Get "bottom_text" }}<p class="sw-sales__bottom-text">{{ . }}</p>{{ end }}
 </section>

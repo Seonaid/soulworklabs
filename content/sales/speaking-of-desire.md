@@ -16,6 +16,7 @@ buy_sub:    "Self-paced · lifetime access"
 
 hero_image:     "img/sales/yearning.jpg"
 hero_image_alt: "Hero image — the opening, evocative photograph (glasses of water, an open hand, light)"
+show_title:     false
 
 faq:
   - { q: "Is this live or self-paced?", a: "Entirely self-paced. It's designed to be done in a single afternoon, though many people prefer to sit with each component for a few days and let it integrate before moving on." }
@@ -77,13 +78,13 @@ One participant came up afterward and said, "Wow. I *really* don't want to have 
 
 {{< sw-image src="img/sales/glass-water.jpg" alt="Inline image — 'a glass of water on a hot day': a clear, unambiguous desire" caption="We start slowly — a glass of water on a hot day — a clear, obviously beneficial desire, before working up to the bigger questions." />}}
 
-{{< sw-learn label="What you'll practice" title="A sequence of contemplations to come into right relationship with wanting" intro="Over the workshop I walk you through practices that let you:" >}}
+{{< sw-learn label="What you'll practice" title="A sequence of contemplations to come into right relationship with wanting" >}}
+Over the workshop I walk you through practices that let you:
+
 {{< sw-learn-row verb="Calibrate" >}}the sensations of different kinds of desire in your body, so you can feel the difference rather than guess at it.{{< /sw-learn-row >}}
 {{< sw-learn-row verb="Clarify" >}}what you actually want — unpack the layers, and get precise about why you want a particular thing.{{< /sw-learn-row >}}
 {{< sw-learn-row verb="Ask" >}}— build the courage to request what you really want, even when you don't yet know the answer, and work with the discomfort of hearing "no" (and the surprise of fearing "yes").{{< /sw-learn-row >}}
 {{< /sw-learn >}}
-
-&nbsp;
 
 {{< sw-cta label="I'm ready to claim my desire" >}}
 
@@ -95,7 +96,7 @@ It works particularly well for people who are **yearning to expand into somethin
 
 > It helps when you know that you want **something** more, bigger, and juicier - but you’re not sure what.
 
-{{< sw-contrast risk_note="Like all meditation practice, this can surface things. I'm not present to help you regulate or debrief — if you're struggling with bigger things, please work with a well-established therapist instead." >}}
+{{< sw-contrast bottom_text="Like all meditation practice, this can surface things. I'm not present to help you regulate or debrief — if you're struggling with bigger things, please work with a well-established therapist instead." >}}
 
 {{< sw-contrast-col label="This is for you if" >}}
 - Your life is basically OK — you've got some ducks. Not in a row, but there are definitely ducks. And you sense there's something more, bigger, juicier available.
@@ -115,7 +116,9 @@ It works particularly well for people who are **yearning to expand into somethin
 
 {{< sw-image src="" alt="Product mockup goes here"/>}}
 
-{{< sw-box label="What's included" title="What's in the box" intro="The workshop is broken into separate guided meditations, each with prompts to help you process what you find. Watch them in a single afternoon, or return to them over time as the practices integrate. Access lasts as long as I offer it — including any upgrades." >}}
+{{< sw-box label="What's included" title="What's in the box" >}}
+The workshop is broken into separate guided meditations, each with prompts to help you process what you find. Watch them in a single afternoon, or return to them over time as the practices integrate. Access lasts as long as I offer it — including any upgrades.
+
 {{< sw-box-group label="Core meditations" >}}
 1. Learning to Trust Desire
 2. Sensing Different Textures

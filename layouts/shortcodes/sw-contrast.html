@@ -2,7 +2,7 @@
   to any labeled pair (objection-handling "will not encourage / can include", a
   checklist's "sounds like you / you'll gain", etc). Contains exactly two
   sw-contrast-col calls. Optional, repeatable. Usage:
-  {{< sw-contrast risk_note="Optional plain-text note, centered below the grid." >}}
+  {{< sw-contrast bottom_text="Optional plain-text note, centered below the grid." >}}
     {{< sw-contrast-col label="This is for you if" >}}
     - Your life is basically OK...
     - You have people who'd gladly support you more...
@@ -15,5 +15,5 @@
   <div class="sw-sales__fornot-grid">
     {{ .Inner }}
   </div>
-  {{ with .Get "risk_note" }}<p class="sw-sales__fornot-risk">{{ . }}</p>{{ end }}
+  {{ with .Get "bottom_text" }}<p class="sw-sales__bottom-text">{{ . }}</p>{{ end }}
 </section>

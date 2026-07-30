@@ -61,6 +61,11 @@
       {{ else }}
       <div class="sw-image-placeholder">{{ $p.hero_image_alt }}</div>
       {{ end }}
+      {{ if and $heroExists $p.show_title }}
+      <div class="sw-sales__media-overlay sw-sales__media-overlay--hero-title" style="{{ printf "background:%s;color:%s" "color-mix(in srgb, var(--sw-ink) 35%, transparent)" "var(--sw-surface)" | safeCSS }}">
+        <p>{{ .Title }}</p>
+      </div>
+      {{ end }}
     </div>
   </div>
 
