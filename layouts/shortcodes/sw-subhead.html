@@ -1,4 +1,9 @@
-{{/* Numbered eyebrow + heading pair inside sales-page story prose. Usage:
-  {{< sw-subhead "01" >}}Heading text{{< /sw-subhead >}} */}}
-<h2 class="sw-sales__subhead-eyebrow">{{ .Get 0 }}</h2>
+{{/* Numbered eyebrow + heading pair inside sales-page story prose. Numbering
+  (01, 02, ...) is automatic, counted across sw-subhead calls only (Hugo's
+  .Ordinal counts every shortcode on the page regardless of name, so it can't
+  be used here). Usage:
+  {{< sw-subhead >}}Heading text{{< /sw-subhead >}} */}}
+{{ $num := add (.Page.Store.Get "sw-subhead-count" | default 0) 1 }}
+{{ .Page.Store.Set "sw-subhead-count" $num }}
+<h2 class="sw-sales__subhead-eyebrow">{{ printf "%02d" $num }}</h2>
 <h3 class="sw-sales__subhead-title">{{ .Inner }}</h3>

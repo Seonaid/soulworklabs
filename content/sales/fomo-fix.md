@@ -34,7 +34,7 @@ If you've ever found yourself **staring at a calendar full of events you should 
 {{< sw-cta label="Reduce Your FOMO Today" >}}
 
 
-{{< sw-subhead "01" >}}FOMO isn't really the fear of missing out.{{< /sw-subhead >}}
+{{< sw-subhead >}}FOMO isn't really the fear of missing out.{{< /sw-subhead >}}
 
 
 It's fear of making the wrong choice.
@@ -73,7 +73,7 @@ After seeing it happen again and again (even to me!) I started being able to see
 The fear of missing out doesn't really come from looking at what other people are doing — that's just a symptom. It comes from deeper things that we believe about ourselves, our roles in the world, and time.
 {{< /sw-callout >}}
 
-{{< sw-subhead "02" >}}This thing we call FOMO has been kicking around for a while.{{< /sw-subhead >}}
+{{< sw-subhead >}}This thing we call FOMO has been kicking around for a while.{{< /sw-subhead >}}
  
 
 It's at the root of a lot of the conflict in period dramas. It probably was present in the caves when somebody got bummed out because everybody went berry picking without them.
@@ -86,7 +86,7 @@ And what's the point of doing things that make you miserable?
 
 {{< sw-cta label="I Want to Enjoy More Without Burning Out" >}}
 
-{{< sw-subhead "03" >}}What if I say no and people stop inviting me?{{< /sw-subhead >}}
+{{< sw-subhead >}}What if I say no and people stop inviting me?{{< /sw-subhead >}}
 
 This is one of the fears hiding behind our frantic activity, so let's meet it directly right now.
 
@@ -126,7 +126,7 @@ Even if you have a high need for stimulation, clearing the fears that are drivin
 {{< sw-cta label="I'm Ready to Fix This FOMO Now!" >}}
 
 
-{{< sw-subhead "04" >}}But What if This is Just Who I Am?{{< /sw-subhead >}}
+{{< sw-subhead >}}But What if This is Just Who I Am?{{< /sw-subhead >}}
 
 The Fear of Missing Out is different from the desire for a rich and fulfilling life.
 

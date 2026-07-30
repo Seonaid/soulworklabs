@@ -11,6 +11,7 @@
 <section class="sw-sales__learn">
   <div class="sw-sales__section-label">{{ .Get "label" }}</div>
   <h3 class="sw-sales__learn-title">{{ .Get "title" }}</h3>
+  {{ .Page.Store.Set "sw-learn-row-count" 0 }}
   {{ .Inner | markdownify }}
   {{ with .Get "bottom_text" }}<p class="sw-sales__bottom-text">{{ . }}</p>{{ end }}
 </section>

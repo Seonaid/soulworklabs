@@ -28,7 +28,7 @@ faq:
 {{< sw-cta label="I already know I want this" >}}
 
 
-{{< sw-subhead "01" >}}Desire is the sensation that keeps us moving forward{{< /sw-subhead >}}
+{{< sw-subhead >}}Desire is the sensation that keeps us moving forward{{< /sw-subhead >}}
 
 I was in my thirties, with a house and children and a fairly complicated life, but when the workshop leader asked me what I wanted, I was stumped. I'd learned to ask myself, "Do I *need* that, or do I just *want* it?" — and to quietly dismiss the wanting. 
 
@@ -60,7 +60,7 @@ What if you could tell the difference, deep in your body, between a yearning tha
 
 {{< sw-cta label="I want this permission slip" >}}
 
-{{< sw-subhead "02" >}}Claiming your desire is claiming your power{{< /sw-subhead >}}
+{{< sw-subhead >}}Claiming your desire is claiming your power{{< /sw-subhead >}}
 
 With the tools in *Speaking of Desire*, there's no need to hedge your bets or water down your goals. With a few simple practices, you can name precisely what you want and find the courage to ask for it.
 
@@ -87,7 +87,7 @@ One participant came up afterward and said, "Wow. I *really* don't want to have 
 
 {{< sw-cta label="I'm ready to claim my desire" >}}
 
-{{< sw-subhead "03" >}}How do I know if this is for me?{{< /sw-subhead >}}
+{{< sw-subhead >}}How do I know if this is for me?{{< /sw-subhead >}}
 
 This version of the program is self-paced. It’s designed to be done in a single afternoon, but I can imagine sitting with the components for a few days and letting them integrate before moving on.
 
@@ -111,7 +111,7 @@ It works particularly well for people who are **yearning to expand into somethin
 
 {{< sw-cta label="Yes — this is for me" >}}
 
-{{< sw-subhead "04" >}}The details{{< /sw-subhead >}}
+{{< sw-subhead >}}The details{{< /sw-subhead >}}
 
 {{< sw-image src="img/sales/SOD-SWL_Mockup.png" alt="Product mockup goes here"/>}}
 

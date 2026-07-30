@@ -1,11 +1,14 @@
-{{/* One numbered row inside sw-learn.html. Numbering (01, 02, ...) is automatic,
-  based on this shortcode's occurrence count on the page. Body text is Inner
-  content (not an attribute) so it can freely contain quote marks/apostrophes.
+{{/* One numbered row inside sw-learn.html. Numbering (01, 02, ...) resets for
+  each sw-learn block and counts only sw-learn-row calls within it (Hugo's
+  .Ordinal counts every shortcode on the page regardless of name, so it can't
+  be used here). Body text is Inner content (not an attribute) so it can
+  freely contain quote marks/apostrophes.
   Usage: {{< sw-learn-row verb="Calibrate" >}}the sensations of different kinds of desire...{{< /sw-learn-row >}} */}}
-{{ $num := add .Ordinal 1 }}
+{{ $num := add (.Page.Store.Get "sw-learn-row-count" | default 0) 1 }}
+{{ .Page.Store.Set "sw-learn-row-count" $num }}
 {{ $text := .Inner | markdownify }}
 {{ $text = $text | replaceRE `^<p>([\s\S]*)</p>\s*$` "$1" }}
 <div class="sw-sales__learn-row">
-  <div class="sw-sales__learn-num">0{{ $num }}</div>
+  <div class="sw-sales__learn-num">{{ printf "%02d" $num }}</div>
   <p class="sw-sales__learn-text"><strong>{{ .Get "verb" }}</strong> {{ $text | safeHTML }}</p>
 </div>

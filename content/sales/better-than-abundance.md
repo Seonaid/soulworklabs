@@ -73,7 +73,7 @@ You think that you can overcome it by having so much that you could never run ou
 
 {{< sw-image src="images/bta-money-split.png" alt="A jigsaw-puzzle image split in two: a briefcase of cash on a green background, and a pile of pennies on a red background" />}}
 
-{{< sw-subhead "01" >}}What This Looks Like in Practice{{< /sw-subhead >}}
+{{< sw-subhead >}}What This Looks Like in Practice{{< /sw-subhead >}}
 
 In your business, it can result in chasing too many clients, and suddenly finding yourself with more business than you can handle.
 
