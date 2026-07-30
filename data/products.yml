@@ -67,11 +67,11 @@
   kind:     "workshop + modules"
   phase:    "Steward"
   blurb:    "Locate the sustainable \"Enough\" between scarcity and abundance, and break the feast-or-famine cycle. Includes a centering practice, business fundamentals, journaling prompts, and a \"Know Your Numbers\" module on sustainable client load."
-  price:    ""
+  price:    "$55"
   note:     "This workshop is from a previous business, but it gets at a core problem that a lot of us have."
   featured: false
   inactive: false
-  url:      "https://products.seonaidlee.com/products/courses/view/1171871"
+  url:      "/sales/better-than-abundance"
 
 - title:    "Resourced"
   kind:     "multi-week course"
