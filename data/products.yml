@@ -35,13 +35,13 @@
 
 - title:    "The FOMO Fix"
   kind:     "~2-hour workshop"
-  phase:    "Clear"
+  phase:    "Clear · Entry"
   blurb:    "For overextended people-pleasers: learn to say a heartfelt no, and make real room for what you actually want to do."
   price:    ""
   note:     ""
-  featured: false
-  inactive: true
-  url:      "#"
+  featured: true
+  inactive: false
+  url:      "/sales/fomo-fix"
 
 - title:    "Speaking of Desire"
   kind:     "2-hour workshop + journaling"

@@ -8,7 +8,7 @@ build:
 
 eyebrow:    "A self-paced workshop · The Receive arc"
 hook:       "What if you could ask for what you want directly — with confidence, and without the fear of rejection?"
-subhead:    "Most of us learned to talk ourselves out of wanting. *Speaking of Desire* is a short, deep practice for telling a true yearning from a passing itch — and finding the courage to ask."
+subhead:    "Most of us learned to talk ourselves out of wanting things. *Speaking of Desire* is a short, deep practice for telling a true yearning from a passing itch so that you know how to ask for the right thing."
 
 price:      "$77"
 buy_url:    "https://products.seonaidlee.com/products/courses/view/1026912/?action=signup"
@@ -16,7 +16,7 @@ buy_sub:    "Self-paced · lifetime access"
 
 hero_image:     "img/sales/yearning.jpg"
 hero_image_alt: "Hero image — the opening, evocative photograph (glasses of water, an open hand, light)"
-show_title:     false
+show_title:     true
 
 faq:
   - { q: "Is this live or self-paced?", a: "Entirely self-paced. It's designed to be done in a single afternoon, though many people prefer to sit with each component for a few days and let it integrate before moving on." }
@@ -76,10 +76,9 @@ One participant came up afterward and said, "Wow. I *really* don't want to have 
 
 > We won't start with your hardest conversation with the most challenging person.
 
-{{< sw-image src="img/sales/glass-water.jpg" alt="Inline image — 'a glass of water on a hot day': a clear, unambiguous desire" caption="We start slowly — a glass of water on a hot day — a clear, obviously beneficial desire, before working up to the bigger questions." />}}
+{{< sw-image src="img/sales/glass-water.jpg" alt="Inline image — 'a glass of water on a hot day': a clear, unambiguous desire" caption="We start slowly — a glass of water on a hot day — a clear, obviously beneficial desire, before working up to the bigger questions." ratio="1500/1024" />}}
 
 {{< sw-learn label="What you'll practice" title="A sequence of contemplations to come into right relationship with wanting" >}}
-Over the workshop I walk you through practices that let you:
 
 {{< sw-learn-row verb="Calibrate" >}}the sensations of different kinds of desire in your body, so you can feel the difference rather than guess at it.{{< /sw-learn-row >}}
 {{< sw-learn-row verb="Clarify" >}}what you actually want — unpack the layers, and get precise about why you want a particular thing.{{< /sw-learn-row >}}
@@ -114,7 +113,7 @@ It works particularly well for people who are **yearning to expand into somethin
 
 {{< sw-subhead "04" >}}The details{{< /sw-subhead >}}
 
-{{< sw-image src="" alt="Product mockup goes here"/>}}
+{{< sw-image src="img/sales/SOD-SWL_Mockup.png" alt="Product mockup goes here"/>}}
 
 {{< sw-box label="What's included" title="What's in the box" >}}
 The workshop is broken into separate guided meditations, each with prompts to help you process what you find. Watch them in a single afternoon, or return to them over time as the practices integrate. Access lasts as long as I offer it — including any upgrades.

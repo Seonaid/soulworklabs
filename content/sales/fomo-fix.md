@@ -16,7 +16,7 @@ buy_sub:    "Self-paced · lifetime access"
 
 hero_image:     "/img/sales/hammock.jpg"
 hero_image_alt: "Hero image — the opening, evocative photograph (a hammock, perhaps?)"
-show_title:     false
+show_title:     true
 ---
 
 *For anxious people-pleasers, dopamine seekers, and anyone who needs a day to recover from their weekend.*
