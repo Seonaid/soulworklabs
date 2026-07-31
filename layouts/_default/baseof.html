@@ -9,13 +9,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 {{ with resources.Get "css/tokens.css" }}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
 {{ with resources.Get "css/main.css" }}<link rel="stylesheet" href="{{ (. | minify).RelPermalink }}">{{ end }}
-{{ if eq .Section "sales" }}{{ with resources.Get "css/sales.css" }}<link rel="stylesheet" href="{{ (. | minify).RelPermalink }}">{{ end }}{{ end }}
+{{ $swPage := in (slice "sales" "pages") .Section }}
+{{ if $swPage }}{{ with resources.Get "css/sales.css" }}<link rel="stylesheet" href="{{ (. | minify).RelPermalink }}">{{ end }}{{ end }}
 </head>
 <body>
 <div class="sw-page">
-  {{ if ne .Section "sales" }}{{ partial "nav.html" . }}{{ end }}
+  {{ if not $swPage }}{{ partial "nav.html" . }}{{ end }}
   {{ block "main" . }}{{ end }}
-  {{ if ne .Section "sales" }}{{ partial "footer.html" . }}{{ end }}
+  {{ if not $swPage }}{{ partial "footer.html" . }}{{ end }}
 </div>
 </body>
 </html>

@@ -1,0 +1,91 @@
+{{/* Shared page shell: mark, hero, flowing body, minimal footer. Used by both
+  layouts/sales/single.html and layouts/pages/single.html — there's nothing
+  commerce-specific in here (price/buy_url/buy_sub are only ever read by the
+  sw-cta/sw-final shortcodes, optionally, from within body content), so one
+  shell serves any long-form page using this design system. */}}
+{{ $p := .Params }}
+
+{{/* One value drives the whole page's theme: map phase -> the arc accent tokens
+  already in tokens.css (never store hex per page). Defaults to Receive. */}}
+{{ $accentMap := dict
+  "Clear"   (slice "var(--sw-clear)" "var(--sw-clear-deep)")
+  "Receive" (slice "var(--sw-receive)" "var(--sw-receive-deep)")
+  "Steward" (slice "var(--sw-steward)" "var(--sw-steward-deep)")
+  "Act"     (slice "var(--sw-act)" "var(--sw-act-deep)")
+  "Book"    (slice "var(--sw-book)" "var(--sw-book-deep)")
+}}
+{{ $phase := $p.phase | default "Receive" }}
+{{ $accents := index $accentMap $phase }}
+{{ if not $accents }}{{ $accents = index $accentMap "Receive" }}{{ end }}
+{{ $accent := index $accents 0 }}
+{{ $accentDeep := index $accents 1 }}
+{{ $showMark := ne $p.show_mark false }}
+{{ $spin := "" }}{{ if ne $p.ambient_motion false }}{{ $spin = "120s" }}{{ end }}
+
+{{/* subhead supports Markdown emphasis; strip markdownify's own <p> wrapper since
+  it sits inside one already. */}}
+{{ $subhead := $p.subhead | markdownify }}
+{{ $subhead = $subhead | replaceRE `^<p>([\s\S]*)</p>\s*$` "$1" }}
+
+{{/* hero_image is looked up the same two ways as sw-image: first as a Hugo
+  Page Resource under assets/ (resized if wider than 2000px, plus
+  fingerprinted caching), then as a plain file under static/. */}}
+{{ $heroSrc := $p.hero_image }}
+{{ $heroURL := "" }}
+{{ $heroImg := "" }}
+{{ if $heroSrc }}{{ $heroImg = resources.Get $heroSrc }}{{ end }}
+{{ if $heroImg }}
+  {{ if gt $heroImg.Width 2000 }}{{ $heroImg = $heroImg.Resize "2000x" }}{{ end }}
+  {{ $heroURL = $heroImg.RelPermalink }}
+{{ else if and $heroSrc (os.FileExists (printf "static/%s" $heroSrc)) }}
+  {{ $heroURL = $heroSrc | relURL }}
+{{ end }}
+{{ $heroExists := ne $heroURL "" }}
+
+<div class="sw-sales" style="{{ printf "--accent:%s;--accent-deep:%s" $accent $accentDeep | safeCSS }}">
+
+  {{ if $showMark }}
+  <div class="sw-sales__mark">
+    {{ partial "spiral-mark.html" (dict "size" 30 "stroke" "var(--accent)" "strokeWidth" 2.4 "spin" $spin) }}
+    <div class="sw-sales__mark-word">Soulwork&nbsp;Labs</div>
+  </div>
+  {{ end }}
+
+  <!-- ═══ HERO — fixed, exactly one per page ═══ -->
+  <header class="sw-sales__hero">
+    <div class="sw-sales__eyebrow">{{ $p.eyebrow }}</div>
+    <h1 class="sw-sales__hook">{{ $p.hook }}</h1>
+    <p class="sw-sales__subhead">{{ $subhead | safeHTML }}</p>
+  </header>
+
+  <div class="sw-sales__media sw-sales__media--hero">
+    <div class="sw-sales__media-frame">
+      {{ if $heroExists }}
+      <img src="{{ $heroURL }}" alt="{{ $p.hero_image_alt }}" loading="eager">
+      {{ else }}
+      <div class="sw-image-placeholder">{{ $p.hero_image_alt }}</div>
+      {{ end }}
+      {{ if and $heroExists $p.show_title }}
+      <div class="sw-sales__media-overlay sw-sales__media-overlay--hero-title" style="{{ printf "background:%s;color:%s" "color-mix(in srgb, var(--sw-ink) 35%, transparent)" "var(--sw-surface)" | safeCSS }}">
+        <p>{{ .Title }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- ═══ BODY — everything else is authored as flowing Markdown + shortcodes:
+    sw-subhead, sw-image, sw-callout, sw-cta, sw-learn, sw-contrast, sw-box,
+    sw-testimonial, sw-faq, sw-final — in whatever order and quantity this page
+    needs. See layouts/shortcodes/. (sw-cta/sw-final need price/buy_url/buy_sub
+    in front matter to be meaningful — leave them unused on pages that don't
+    have those.) ═══ -->
+  <div class="sw-sales__body">
+    {{ .Content }}
+  </div>
+
+  <!-- Minimal footer -->
+  <footer class="sw-sales__footer">
+    <div class="sw-sales__footer-text">&copy; {{ now.Format "2006" }} Soulwork Labs &middot; <a href="{{ "https://soulworklabs.com" }}">soulworklabs.com</a></div>
+  </footer>
+
+</div>
