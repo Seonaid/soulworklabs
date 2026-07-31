@@ -19,7 +19,12 @@
 {{ if not $accents }}{{ $accents = index $accentMap "Receive" }}{{ end }}
 {{ $accent := index $accents 0 }}
 {{ $accentDeep := index $accents 1 }}
-{{ $showMark := ne $p.show_mark false }}
+{{/* show_mark defaults to true, except on pages (non-sales) where the nav
+  already carries the brand mark — default false there to avoid showing it
+  twice. Either way, an explicit show_mark in front matter always wins. */}}
+{{ $showMark := $p.show_mark }}
+{{ if not (isset $p "show_mark") }}{{ $showMark = ne .Section "pages" }}{{ end }}
+{{ $showTitle := ne $p.show_title false }}
 {{ $spin := "" }}{{ if ne $p.ambient_motion false }}{{ $spin = "120s" }}{{ end }}
 
 {{/* subhead supports Markdown emphasis; strip markdownify's own <p> wrapper since
@@ -56,6 +61,11 @@
     <div class="sw-sales__eyebrow">{{ $p.eyebrow }}</div>
     <h1 class="sw-sales__hook">{{ $p.hook }}</h1>
     <p class="sw-sales__subhead">{{ $subhead | safeHTML }}</p>
+    {{/* Optional dateline for migrated content — only renders if the page sets
+      original_date (and optionally original_url) in front matter. */}}
+    {{ with $p.original_date }}
+    <div class="sw-sales__origin">Originally published {{ (. | time).Format "January 2, 2006" }}{{ with $p.original_url }} &middot; <a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ . | replaceRE `^https?://(www\.)?` "" | replaceRE `/$` "" }}</a>{{ end }}</div>
+    {{ end }}
   </header>
 
   <div class="sw-sales__media sw-sales__media--hero">
@@ -65,7 +75,7 @@
       {{ else }}
       <div class="sw-image-placeholder">{{ $p.hero_image_alt }}</div>
       {{ end }}
-      {{ if and $heroExists $p.show_title }}
+      {{ if and $heroExists $showTitle }}
       <div class="sw-sales__media-overlay sw-sales__media-overlay--hero-title" style="{{ printf "background:%s;color:%s" "color-mix(in srgb, var(--sw-ink) 35%, transparent)" "var(--sw-surface)" | safeCSS }}">
         <p>{{ .Title }}</p>
       </div>

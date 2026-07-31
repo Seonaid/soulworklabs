@@ -33,7 +33,8 @@
       <div class="sw-founder__rest">
         {{ $rest | safeHTML }}
         <div class="sw-founder__cta">
-          <a href="{{ $p.cta_url | strings.TrimPrefix "/" | relURL }}" class="sw-btn sw-btn--primary">{{ $p.cta_label }}</a>
+          {{ $ctaExternal := and (or (strings.HasPrefix $p.cta_url "http://") (strings.HasPrefix $p.cta_url "https://")) (not (strings.HasPrefix $p.cta_url site.BaseURL)) }}
+          <a href="{{ $p.cta_url | strings.TrimPrefix "/" | relURL }}"{{ if $ctaExternal }} target="_blank" rel="noopener noreferrer"{{ end }} class="sw-btn sw-btn--primary">{{ $p.cta_label }}</a>
         </div>
       </div>
     </div>

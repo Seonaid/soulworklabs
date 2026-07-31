@@ -13,6 +13,9 @@
 .sw-sales__eyebrow{font:500 0.6875rem/1 var(--sw-mono);letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:22px}
 .sw-sales__hook{margin:0;font:italic 400 clamp(1.875rem,5vw,3.625rem)/1.14 var(--sw-serif);color:var(--sw-ink);letter-spacing:-.015em;text-wrap:balance;max-width:20ch;margin-inline:auto}
 .sw-sales__subhead{margin:26px auto 0;max-width:52ch;font:400 clamp(1.125rem,2vw,1.3125rem)/1.55 var(--sw-serif);color:var(--sw-body);text-wrap:pretty}
+.sw-sales__origin{margin-top:18px;font:500 0.6875rem/1 var(--sw-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--sw-muted-strong)}
+.sw-sales__origin a{color:var(--sw-muted-strong)}
+.sw-sales__origin a:hover{color:var(--sw-link-hover)}
 
 /* Image slots */
 .sw-sales__media{margin:0 auto clamp(30px,4vw,46px);padding:0 clamp(22px,5vw,40px)}

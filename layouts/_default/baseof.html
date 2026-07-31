@@ -10,11 +10,12 @@
 {{ with resources.Get "css/tokens.css" }}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
 {{ with resources.Get "css/main.css" }}<link rel="stylesheet" href="{{ (. | minify).RelPermalink }}">{{ end }}
 {{ $swPage := in (slice "sales" "pages") .Section }}
+{{ $isSales := eq .Section "sales" }}
 {{ if $swPage }}{{ with resources.Get "css/sales.css" }}<link rel="stylesheet" href="{{ (. | minify).RelPermalink }}">{{ end }}{{ end }}
 </head>
 <body>
 <div class="sw-page">
-  {{ if not $swPage }}{{ partial "nav.html" . }}{{ end }}
+  {{ if not $isSales }}{{ partial "nav.html" . }}{{ end }}
   {{ block "main" . }}{{ end }}
   {{ if not $swPage }}{{ partial "footer.html" . }}{{ end }}
 </div>

@@ -1,0 +1,10 @@
+{{/* Site-wide Markdown link render hook: every link authored in Markdown body
+  content (sales pages, generic pages, anywhere) passes through here. External
+  links (anything not on this site's own baseURL, and not a root-relative or
+  bare relative path) open in a new tab; internal links are untouched. */}}
+{{ $dest := .Destination }}
+{{ $external := false }}
+{{ if or (strings.HasPrefix $dest "http://") (strings.HasPrefix $dest "https://") }}
+  {{ $external = not (strings.HasPrefix $dest site.BaseURL) }}
+{{ end }}
+<a href="{{ $dest | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Text | safeHTML }}</a>

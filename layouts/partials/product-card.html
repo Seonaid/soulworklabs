@@ -10,7 +10,8 @@
 }}
 {{ $accent := index $accentMap $p.phase }}
 {{ if not $accent }}{{ $accent = "var(--sw-clear)" }}{{ end }}
-<a href="{{ if eq $p.url "#" }}#{{ else }}{{ $p.url | strings.TrimPrefix "/" | relURL }}{{ end }}" class="sw-card" style="{{ printf "--sw-card-accent:%s" $accent | safeCSS }}">
+{{ $external := and (or (strings.HasPrefix $p.url "http://") (strings.HasPrefix $p.url "https://")) (not (strings.HasPrefix $p.url site.BaseURL)) }}
+<a href="{{ if eq $p.url "#" }}#{{ else }}{{ $p.url | strings.TrimPrefix "/" | relURL }}{{ end }}"{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }} class="sw-card" style="{{ printf "--sw-card-accent:%s" $accent | safeCSS }}">
   <div class="sw-card__top">
     <div class="sw-card__phase-group">
       <span class="sw-card__dot"></span>
