@@ -19,5 +19,8 @@
   {{ block "main" . }}{{ end }}
   {{ if not $swPage }}{{ partial "footer.html" . }}{{ end }}
 </div>
+{{ with site.Params.metaPixelId }}
+{{ partial "consent-banner.html" . }}
+{{ end }}
 </body>
 </html>

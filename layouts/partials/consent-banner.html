@@ -1,0 +1,66 @@
+{{/* Cookie-consent banner gating the Meta Pixel. Only included when
+  site.Params.metaPixelId is set (see baseof.html) — "." here is that ID.
+
+  The reliability guarantee: the pixel-loading code lives inside a function
+  that is NEVER called except from a consent check. There's no race between
+  "banner is showing" and "pixel already fired" — the fbq init/track calls
+  simply don't exist as a code path until consent is read as accepted,
+  either from a stored prior choice or a live Accept click. Choice persists
+  in localStorage so returning visitors aren't asked again. */}}
+<div id="sw-consent-banner" class="sw-consent" hidden>
+  <div class="sw-consent__inner">
+    <p class="sw-consent__text">This site uses a small tracking pixel (Meta/Facebook) to understand how visitors find and use it. No tracking happens unless you accept.</p>
+    <div class="sw-consent__actions">
+      <button type="button" id="sw-consent-decline" class="sw-btn sw-btn--secondary">Decline</button>
+      <button type="button" id="sw-consent-accept" class="sw-btn sw-btn--primary">Accept</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var PIXEL_ID = {{ . | jsonify }};
+  var STORAGE_KEY = "sw_consent";
+
+  function loadMetaPixel(id) {
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', id);
+    fbq('track', 'PageView');
+  }
+
+  var stored;
+  try { stored = window.localStorage.getItem(STORAGE_KEY); } catch (e) { stored = null; }
+
+  var banner = document.getElementById("sw-consent-banner");
+
+  if (stored === "accepted") {
+    loadMetaPixel(PIXEL_ID);
+  } else if (stored !== "declined" && banner) {
+    banner.hidden = false;
+  }
+
+  if (banner) {
+    var accept = document.getElementById("sw-consent-accept");
+    var decline = document.getElementById("sw-consent-decline");
+    if (accept) {
+      accept.addEventListener("click", function () {
+        try { window.localStorage.setItem(STORAGE_KEY, "accepted"); } catch (e) {}
+        banner.hidden = true;
+        loadMetaPixel(PIXEL_ID);
+      });
+    }
+    if (decline) {
+      decline.addEventListener("click", function () {
+        try { window.localStorage.setItem(STORAGE_KEY, "declined"); } catch (e) {}
+        banner.hidden = true;
+      });
+    }
+  }
+})();
+</script>

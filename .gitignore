@@ -2,3 +2,6 @@
 /resources/
 .hugo_build.lock
 .DS_Store
+
+# Not decided yet whether this should be public — see BACKLOG.md itself
+/BACKLOG.md

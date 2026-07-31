@@ -5,6 +5,7 @@ title = "Soulwork Labs"
   portraitSide = "right"    # 'left' or 'right' — which side the founder portrait sits on
   ambientMotion = true      # rotating spiral SVGs
   heroSpiral = true         # show the large rotating spiral behind the hero
+  metaPixelId = ""          # Meta (Facebook) Pixel ID — leave blank to disable
 
 [markup.goldmark.renderer]
   unsafe = true

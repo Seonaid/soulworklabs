@@ -203,3 +203,11 @@ a:hover{color:var(--sw-link-hover)}
 
 /* ---------- Spiral marks (accent color set via inline style per usage) ---------- */
 .sw-mark{flex:none}
+
+/* ---------- Cookie/consent banner (gates the Meta Pixel — see consent-banner.html) ---------- */
+.sw-consent{position:fixed;left:0;right:0;bottom:0;z-index:1000;background:var(--sw-ink);box-shadow:0 -8px 24px -12px rgba(0,0,0,.35)}
+.sw-consent__inner{max-width:1280px;margin:0 auto;padding:18px clamp(20px,4vw,48px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px}
+.sw-consent__text{margin:0;flex:1 1 40ch;font:400 0.9375rem/1.5 var(--sw-serif);color:var(--sw-on-dark-dim)}
+.sw-consent__actions{flex:none;display:flex;gap:10px}
+.sw-consent .sw-btn--secondary{color:var(--sw-on-dark);border-color:rgba(216,205,180,0.4)}
+.sw-consent .sw-btn--secondary:hover{color:var(--sw-on-dark);border-color:var(--sw-on-dark)}
