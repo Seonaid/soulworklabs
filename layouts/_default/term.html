@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{/* Category archive — same list-style foundation as library.html (shared via
+  sw-index-list.html), fed from this site's own .Pages instead of a data file. */}}
+{{ $pages := .Pages.ByDate.Reverse }}
+<main class="sw-library">
+  <div class="sw-library__inner">
+    <div class="sw-section-label sw-library__label">Category</div>
+    <h1 class="sw-library__heading">{{ .Title }}</h1>
+    {{ with .Params.intro }}<p class="sw-library__intro">{{ . }}</p>{{ end }}
+
+    {{ $rows := slice }}
+    {{ range $pages }}
+      {{ $date := .Date }}
+      {{ with .Params.original_date }}{{ $date = . | time }}{{ end }}
+      {{ $rows = $rows | append (dict
+        "date" (cond $date.IsZero "" ($date.Format "2006"))
+        "title" .Title
+        "kind" (.Params.kind | default "Essay")
+        "url" .RelPermalink
+        "external" false) }}
+    {{ end }}
+    {{ $meta := printf "%d piece" (len $pages) }}
+    {{ if ne (len $pages) 1 }}{{ $meta = printf "%d pieces" (len $pages) }}{{ end }}
+    {{ $sections := slice (dict "name" .Title "meta" $meta "items" $rows) }}
+    {{ partial "sw-index-list.html" (dict "sections" $sections) }}
+  </div>
+</main>
+{{ end }}

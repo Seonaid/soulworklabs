@@ -64,7 +64,17 @@
     {{/* Optional dateline for migrated content — only renders if the page sets
       original_date (and optionally original_url) in front matter. */}}
     {{ with $p.original_date }}
-    <div class="sw-sales__origin">Originally published {{ (. | time).Format "January 2, 2006" }}{{ with $p.original_url }} &middot; <a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ . | replaceRE `^https?://(www\.)?` "" | replaceRE `/$` "" }}</a>{{ end }}</div>
+    <div class="sw-origin">Originally published {{ (. | time).Format "January 2, 2006" }}{{ with $p.original_url }} &middot; <a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ . | replaceRE `^https?://(www\.)?` "" | replaceRE `/$` "" }}</a>{{ end }}</div>
+    {{ end }}
+    {{/* Clickable category tags — only for pages that actually carry the
+      categories taxonomy (eyebrow alone doesn't read as a link, so this is a
+      separate, deliberately pill-shaped affordance back to the archive). */}}
+    {{ with .GetTerms "categories" }}
+    <div class="sw-category">
+      {{ range . }}
+      <a href="{{ .RelPermalink }}" class="sw-category__tag">{{ .Title }}</a>
+      {{ end }}
+    </div>
     {{ end }}
   </header>
 

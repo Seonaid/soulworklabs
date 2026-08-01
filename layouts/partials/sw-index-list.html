@@ -1,0 +1,22 @@
+{{/* Renders grouped list-style rows: takes (dict "sections" [{name, meta, items}]),
+  where each item is {date, title, kind, url, external}. Shared row-rendering
+  foundation for library.html (external reading-list rows, via library-table.html)
+  and taxonomy term pages (this site's own pages grouped by category) — the two
+  differ only in where their data comes from, not in how a row looks. */}}
+{{ range .sections }}
+  {{ if gt (len .items) 0 }}
+  <div class="sw-library__section">
+    <div class="sw-library__section-head">
+      <h2 class="sw-library__section-name">{{ .name }}</h2>
+      <span class="sw-library__section-meta">{{ .meta }}</span>
+    </div>
+    {{ range .items }}
+    <a href="{{ .url }}"{{ if .external }} target="_blank" rel="noopener"{{ end }} class="sw-library__row">
+      <span class="sw-library__row-date">{{ .date }}</span>
+      <span class="sw-library__row-title">{{ .title }}</span>
+      <span class="sw-library__row-kind">{{ .kind }} {{ if .external }}&nearr;{{ else }}&rarr;{{ end }}</span>
+    </a>
+    {{ end }}
+  </div>
+  {{ end }}
+{{ end }}

@@ -1,9 +1,10 @@
 ---
 title:      "Condensed Sunlight"
 build:
-  list: never
+  list: local
 
 eyebrow:    "Essays and Musings"
+categories: ["Essays and Musings"]
 hook:       "E = Mc^2"
 subhead:    "Our bodies run on the same equation as the sun."
 

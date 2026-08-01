@@ -1,21 +1,17 @@
-{{/* Renders data/library.yml grouped into the sections defined in data/library_sections.yml.
-  Ranges over the data — do not hardcode rows. */}}
+{{/* Normalizes data/library.yml (grouped by data/library_sections.yml) into the
+  shared {sections: [{name, meta, items}]} shape and hands off to sw-index-list.html,
+  the row-rendering partial also used by taxonomy term pages. Every row here is an
+  external link out to the original source, hence external=true throughout. */}}
+{{ $sections := slice }}
 {{ range hugo.Data.library_sections }}
   {{ $sec := . }}
   {{ $items := where hugo.Data.library "section" $sec.name }}
   {{ if gt (len $items) 0 }}
-  <div class="sw-library__section">
-    <div class="sw-library__section-head">
-      <h2 class="sw-library__section-name">{{ $sec.name }}</h2>
-      <span class="sw-library__section-meta">{{ $sec.meta }}</span>
-    </div>
+    {{ $rows := slice }}
     {{ range $items }}
-    <a href="{{ .url }}" target="_blank" rel="noopener" class="sw-library__row">
-      <span class="sw-library__row-date">{{ .date }}</span>
-      <span class="sw-library__row-title">{{ .title }}</span>
-      <span class="sw-library__row-kind">{{ .type }} &nearr;</span>
-    </a>
+      {{ $rows = $rows | append (dict "date" .date "title" .title "kind" .type "url" .url "external" true) }}
     {{ end }}
-  </div>
+    {{ $sections = $sections | append (dict "name" $sec.name "meta" $sec.meta "items" $rows) }}
   {{ end }}
 {{ end }}
+{{ partial "sw-index-list.html" (dict "sections" $sections) }}
