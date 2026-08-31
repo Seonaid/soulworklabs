@@ -1,0 +1,7 @@
+{{ define "main" }}
+{{/* Generic fallback for any content directory with no dedicated section
+  layout and no _index.md — safety net so a freeform new section (or a new
+  taxonomy term with no matching content file) never falls through to a crash
+  or a bare unstyled page. */}}
+{{ partial "sw-pages-list.html" (dict "page" . "label" (.Section | humanize)) }}
+{{ end }}

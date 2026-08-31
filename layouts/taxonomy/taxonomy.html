@@ -1,0 +1,27 @@
+{{ define "main" }}
+{{/* Index of every term in a taxonomy (e.g. /categories/ listing all categories),
+  reusing the same row-rendering foundation as the library page and term pages
+  (sw-index-list.html) — one row per term, count standing in for a date. */}}
+{{ $terms := .Data.Terms.Alphabetical }}
+<main class="sw-library">
+  <div class="sw-library__inner">
+    <div class="sw-section-label sw-library__label">{{ .Data.Plural | humanize }}</div>
+    <h1 class="sw-library__heading">{{ .Title }}</h1>
+
+    {{ $rows := slice }}
+    {{ range $terms }}
+      {{ $n := .Count }}
+      {{ $rows = $rows | append (dict
+        "date" ""
+        "title" .Page.Title
+        "kind" (printf "%d %s" $n (cond (eq $n 1) "piece" "pieces"))
+        "url" .Page.RelPermalink
+        "external" false) }}
+    {{ end }}
+    {{ $meta := printf "%d term" (len $terms) }}
+    {{ if ne (len $terms) 1 }}{{ $meta = printf "%d terms" (len $terms) }}{{ end }}
+    {{ $sections := slice (dict "name" .Title "meta" $meta "items" $rows) }}
+    {{ partial "sw-index-list.html" (dict "sections" $sections) }}
+  </div>
+</main>
+{{ end }}

@@ -1,0 +1,32 @@
+{{/* Generic "list of this site's own pages" archive: header block (label/heading/
+  intro) + one grouped section of date/title/kind rows built from .Pages, reusing
+  the row-rendering foundation shared with the library page (sw-index-list.html).
+  Takes (dict "page" . "label" "..."). Used by both taxonomy term pages (.Pages =
+  pages sharing a term) and the generic section fallback (.Pages = pages in a
+  content directory) — they differ only in what .Pages means and what label to
+  show above the heading. */}}
+{{ $ctx := .page }}
+{{ $pages := $ctx.Pages.ByDate.Reverse }}
+<main class="sw-library">
+  <div class="sw-library__inner">
+    <div class="sw-section-label sw-library__label">{{ .label }}</div>
+    <h1 class="sw-library__heading">{{ $ctx.Title }}</h1>
+    {{ with $ctx.Params.intro }}<p class="sw-library__intro">{{ . }}</p>{{ end }}
+
+    {{ $rows := slice }}
+    {{ range $pages }}
+      {{ $date := .Date }}
+      {{ with .Params.original_date }}{{ $date = . | time }}{{ end }}
+      {{ $rows = $rows | append (dict
+        "date" (cond $date.IsZero "" ($date.Format "2006"))
+        "title" .Title
+        "kind" (.Params.item_kind | default "Page")
+        "url" .RelPermalink
+        "external" false) }}
+    {{ end }}
+    {{ $meta := printf "%d page" (len $pages) }}
+    {{ if ne (len $pages) 1 }}{{ $meta = printf "%d pages" (len $pages) }}{{ end }}
+    {{ $sections := slice (dict "name" $ctx.Title "meta" $meta "items" $rows) }}
+    {{ partial "sw-index-list.html" (dict "sections" $sections) }}
+  </div>
+</main>

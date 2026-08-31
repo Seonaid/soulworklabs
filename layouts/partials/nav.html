@@ -1,4 +1,8 @@
-{{ $base := .File.BaseFileName }}
+{{/* .File is nil for pages with no backing content file — e.g. a taxonomy term
+  created purely by adding a freeform category/tag to some page's front matter,
+  with no matching content/categories/<slug>/_index.md. Guard against that. */}}
+{{ $base := "" }}
+{{ with .File }}{{ $base = .BaseFileName }}{{ end }}
 <nav class="sw-nav">
   <a href="{{ "" | relURL }}" class="sw-nav__brand">
     {{ partial "spiral-mark.html" (dict "size" 26 "stroke" "#3f5140" "strokeWidth" 2.4) }}

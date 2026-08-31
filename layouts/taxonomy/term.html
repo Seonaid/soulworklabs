@@ -1,0 +1,3 @@
+{{ define "main" }}
+{{ partial "sw-pages-list.html" (dict "page" . "label" (.Data.Singular | humanize)) }}
+{{ end }}
