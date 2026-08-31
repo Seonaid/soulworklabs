@@ -4,7 +4,8 @@ build:
   list: local
 
 eyebrow:    "Essays and Musings"
-categories: ["Essays and Musings"]
+categories: ["Essays and Musings", "test"]
+item_kind:  "Essay"
 hook:       "E = Mc^2"
 subhead:    "Our bodies run on the same equation as the sun."
 
@@ -44,12 +45,16 @@ c^2 so huge (on our scales), but the amounts of matter/energy involved so small 
 
 We are condensed sunlight, breathing condensed sunlight, basking in (not condensed) sunlight, forged in cosmic fire, conversing with stars. 
 
-Every atom in your body heavier than iron was born in a supernova -- Stars DIED for you to even be here. There are galaxies in your ancestry.
+Every atom in your body heavier than iron was born in a supernova -- Stars DIED for you to even be here. 
+
+There are galaxies in your ancestry.
 
 They are also in the ant, the acorn, the snake, and the virus. They dance down cascades, caress meadows, and burst forth from volcanoes.
 
-"Who am I to…" I hear people say. Why do I think that I have special access to awareness, to intuition, to auspicious coincidence?
+Every particle in your body is in conversation with the universe.
 
-No.
+This is what I reach for at each moment of auspicious coincidence, when things line up Just So, and it feels like the universe is giving me a nod and a wink. There's nothing special about this. Everyone can do it. 
 
-That's what they want us to know, these teachers we have not been able to hear for the last thousands of years. This is normal. Everyone can do this. There's nothing special about it. We just need to learn how, like swimming, or dancing, or driving a car. Driving the local part of condensed starlight we find ourselves in, that's the work.
+That's what they want us to know, these teachers that have been talking about meditation and transcendence and intuition and insight for the last many thousand years: This is normal. 
+
+And when we have practiced sufficiently, we can hear the conversation in our cells. We can sense our way through a complex universe. We can discard the map and engage the terrain directly. 

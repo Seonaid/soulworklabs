@@ -10,8 +10,8 @@
 - n: 3
   name: "Steward"
   accent: "var(--sw-steward)"
-  desc: "Right relationship with what flows to you: money, community, support, time. Find the sustainable \"Enough.\""
+  desc: "Come into right relationship with what flows through your life: money, community, support, time. Find a sustainable sense of \"Enough.\""
 - n: 4
   name: "Act"
   accent: "var(--sw-act)"
-  desc: "Move back into the world with the calling claimed — acting from a still centre rather than the weight of it all."
+  desc: "Move back into the world with the calling claimed — acting with the clarity of a still centre rather than reacting to the pulls of a million \"shoulds\"."

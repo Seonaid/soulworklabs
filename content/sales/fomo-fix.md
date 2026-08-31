@@ -118,8 +118,8 @@ With The FOMO Fix in place, you can still *do* lots of stuff. Possibly more than
 Even if you have a high need for stimulation, clearing the fears that are driving your calendar and replacing them with discernment lets you create a high-speed life that's exciting on its own terms — rather than driven by a sense of time slipping away.
 
 {{< sw-learn label="Path to Clarity" title="Here's the Path to Clarity in The FOMO Fix" bottom_text="Imagine how good it could feel to just drink your coffee without anything lurking in the back of your mind.">}}
-{{< sw-learn-row verb="Identify" >}}what's actually driving your FOMO — this might surprise you!{{< /sw-learn-row >}}
-{{< sw-learn-row verb="Pause" >}}— learn to make intentional decisions instead of reactive ones, even when you're afraid of missing out.{{< /sw-learn-row >}}
+{{< sw-learn-row verb="Identify" >}}what's actually driving your FOMO... this might surprise you!{{< /sw-learn-row >}}
+{{< sw-learn-row verb="Pause" >}} and learn to make intentional decisions instead of reactive ones, even when you're afraid of missing out.{{< /sw-learn-row >}}
 {{< sw-learn-row verb="Build" >}}simple habits that keep your schedule aligned with what actually matters.{{< /sw-learn-row >}}
 {{< /sw-learn >}}
 
