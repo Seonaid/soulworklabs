@@ -10,7 +10,7 @@
   note:     ""
   featured: true
   inactive: false
-  url:      "https://products.seonaidlee.com/products/courses/view/1193910"
+  url:      "https://learn.soulworklabs.com/products/courses/view/1193910"
 
 
 - title:    "The Soft Start"
@@ -31,7 +31,7 @@
   note:     ""
   featured: false
   inactive: false
-  url:      "https://products.seonaidlee.com/products/courses/view/1171716" #Add the sales page for this product... but it needs to be built
+  url:      "https://learn.soulworklabs.com/products/courses/view/1171716" #Add the sales page for this product... but it needs to be built
 
 - title:    "The FOMO Fix"
   kind:     "~2-hour workshop"

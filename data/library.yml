@@ -15,6 +15,12 @@
   note:    "My cosmology in a tidy list"
   section: "Start Here"
 
+- title: "What About God, Then?"
+  type: "Epic Blog Post"
+  date: "2014"
+  url: "https://seonaidlee.com/perceiving-deep-order-or-does-god-exist/"
+  section: "Start Here"
+
 - title:   "Beauty All the Way Down"
   type:    "Blog Post"
   source:  ""
@@ -23,12 +29,18 @@
   note:    ""
   section: "Start Here"
 
+- title: "Dreams, Wanting, and the True Nature of Desire"
+  type: "Blog Post"
+  date: "2015"
+  url: "https://medium.com/@seonaidlee/dreams-wanting-and-the-true-nature-of-desire-7250149a92d1"
+  section: "Essays"
+
 - title: "I Would Still Plant a Tree"
   type: "Blog Post"
   source: "onthequest.wordpress.com"
   date: "2020"
   url: "https://seonaidlee.com/i-would-still-plant-a-tree/"
-  section: "Start Here"
+  section: "Essays"
 
 
 - title:   "The Cat and Carnegie Hall"
@@ -62,7 +74,7 @@
   note:    ""
   section: "Conversations"
 
-- title:   "Energetic Consent - The Intersection of Discipline and Devotion"
+- title:   "Energetic Consent - intimate relationships as sites of practice"
   type:    "YouTube"
   source:  ""
   date:    "2025"
@@ -78,7 +90,7 @@
   note:    ""
   section: "Conversations"
 
-- title:   "Sometimes You Need a Gold Star"
+- title:   "Gold Stars Might Help"
   type:    "Blog Post"
   source:  ""
   date:    "ongoing"

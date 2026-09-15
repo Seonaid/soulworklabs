@@ -51,9 +51,9 @@ The FOMO Fix helps you make decisions you feel good about — so you can stop li
 
 > Hi! I'm Seonaid, creator of The FOMO Fix, and a recovering Yes-a-holic.
 
-I used to be the kind of person who never had time to sit down for a coffee, but always had to drink it while walking somewhere else. (Let's be honest - driving.) 
+I was the kind of person who sat down for a coffee, but instead drank it (while thinking about my plans for the day) on the way to somewhere else.
 
-So were all of my friends.
+All of my friends were the same.
 
 We were young and accomplished and connected and social. We were going to change the world! And go to all the parties! And know all the things!!! 
 
