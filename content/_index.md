@@ -1,7 +1,7 @@
 ---
 title: "Soulwork Labs"
 eyebrow: "Deep Seeking · Secular mysticism · Discernment"
-hero_title: "A Space for Overthinkers to Reconnect with Awe"
+hero_title: "A Space for Spiritually Driven Overthinkers to Reconnect with Awe"
 hero_sub: "The universe is waiting to see what you’ll do next."
 hero_image_placeholder: "Drop your opening image here — e.g. the “Logos” painting"
 insight_eyebrow: "01  /  What work is asking for your hands?"
