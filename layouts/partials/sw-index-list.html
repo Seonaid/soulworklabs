@@ -13,7 +13,10 @@
     {{ range .items }}
     <a href="{{ .url }}"{{ if .external }} target="_blank" rel="noopener"{{ end }} class="sw-library__row">
       <span class="sw-library__row-date">{{ .date }}</span>
-      <span class="sw-library__row-title">{{ .title }}</span>
+      <span class="sw-library__row-title">
+        <span class="sw-library__row-title-line">{{ .title }}{{ with .author }} &ndash; {{ . }}{{ end }}</span>
+        {{ with .note }}<span class="sw-library__row-note">{{ . }}</span>{{ end }}
+      </span>
       <span class="sw-library__row-kind">{{ .kind }} {{ if .external }}&nearr;{{ else }}&rarr;{{ end }}</span>
     </a>
     {{ end }}

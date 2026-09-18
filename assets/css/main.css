@@ -182,7 +182,9 @@ a:hover{color:var(--sw-link-hover)}
 .sw-library__row{display:flex;align-items:baseline;gap:16px;padding:15px 0;border-bottom:1px solid rgba(42,38,32,0.08);text-decoration:none;transition:background .2s ease}
 .sw-library__row:hover{background:rgba(42,38,32,0.03)}
 .sw-library__row-date{font:500 0.6562rem/1.5 var(--sw-mono);letter-spacing:.06em;color:var(--sw-muted-strong);flex:none;min-width:64px}
-.sw-library__row-title{flex:1;font:400 1.25rem/1.35 var(--sw-serif);color:var(--sw-ink);text-wrap:pretty}
+.sw-library__row-title{flex:1;display:flex;flex-direction:column;gap:3px;min-width:0}
+.sw-library__row-title-line{font:400 1.25rem/1.35 var(--sw-serif);color:var(--sw-ink);text-wrap:pretty}
+.sw-library__row-note{font:italic 400 0.8125rem/1.4 var(--sw-serif);color:var(--sw-muted-strong);text-wrap:pretty}
 .sw-library__row-kind{font:500 0.625rem/1 var(--sw-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--sw-link);flex:none}
 
 /* ---------- Footer ---------- */

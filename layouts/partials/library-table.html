@@ -9,7 +9,7 @@
   {{ if gt (len $items) 0 }}
     {{ $rows := slice }}
     {{ range $items }}
-      {{ $rows = $rows | append (dict "date" .date "title" .title "kind" .type "url" .url "external" true) }}
+      {{ $rows = $rows | append (dict "date" .date "title" .title "author" .author "kind" .type "url" .url "external" true "note" .note) }}
     {{ end }}
     {{ $sections = $sections | append (dict "name" $sec.name "meta" $sec.meta "items" $rows) }}
   {{ end }}
