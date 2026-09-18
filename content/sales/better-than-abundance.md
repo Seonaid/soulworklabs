@@ -11,7 +11,7 @@ hook:       "Between Scarcity and Abundance, there is a magical sweet spot title
 subhead:    "We live in a strange world. There is so much material wealth flowing around us, and we are all working so hard, but it can feel challenging to connect the work we are doing with the flow we can see so that we are confident about simply meeting our needs."
 
 price:      "$55"
-buy_url:    "https://products.seonaidlee.com/products/courses/view/1171871/?action=signup"
+buy_url:    "https://learn.soulworklabs.com/products/courses/view/1171871/?action=signup"
 buy_sub:    "Self-paced · lifetime access"
 
 hero_image:     "images/bta-hero.jpg"

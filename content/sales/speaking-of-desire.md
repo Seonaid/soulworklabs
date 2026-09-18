@@ -11,7 +11,7 @@ hook:       "What if you could ask for what you want directly — with confidenc
 subhead:    "Most of us learned to talk ourselves out of wanting things. *Speaking of Desire* is a short, deep practice for telling a true yearning from a passing itch so that you know how to ask for the right thing."
 
 price:      "$77"
-buy_url:    "https://products.seonaidlee.com/products/courses/view/1026912/?action=signup"
+buy_url:    "https://learn.soulworklabs.com/products/courses/view/1026912/?action=signup"
 buy_sub:    "Self-paced · lifetime access"
 
 hero_image:     "img/sales/yearning.jpg"

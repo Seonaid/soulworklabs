@@ -11,7 +11,7 @@ hook:       "Ready to free yourself from the fear of missing out?"
 subhead:    "Raise the standards on how you spend your time... Even if you're worried about missing something important or seeming rude."
 
 price:      "$27"
-buy_url:    "https://products.seonaidlee.com/products/courses/view/1160015?action=signup"
+buy_url:    "https://learn.soulworklabs.com/products/courses/view/1160015?action=signup"
 buy_sub:    "Self-paced · lifetime access"
 
 hero_image:     "img/sales/hammock.jpg"
