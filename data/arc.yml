@@ -2,16 +2,16 @@
 - n: 1
   name: "Clear"
   accent: "var(--sw-clear)"
-  desc: "Make room. Clear the involuntary obligations and inherited noise so what's genuinely yours has somewhere to land."
+  desc: "Make space in your life to understand what you truly want"
 - n: 2
   name: "Receive"
   accent: "var(--sw-receive)"
-  desc: "Learn to let good things actually reach you — to want out loud, to ask, to take in what arrives without rushing past it."
+  desc: "Give yourself permission to relish the benefits of your actions"
 - n: 3
   name: "Steward"
   accent: "var(--sw-steward)"
-  desc: "Come into right relationship with what flows through your life: money, community, support, time. Find a sustainable sense of \"Enough.\""
+  desc: "Confidently tend the flows that move through your life"
 - n: 4
   name: "Act"
   accent: "var(--sw-act)"
-  desc: "Move back into the world with the calling claimed — acting with the clarity of a still centre rather than reacting to the pulls of a million \"shoulds\"."
+  desc: "Move from the steady foundation of a still centre"
