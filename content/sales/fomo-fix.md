@@ -21,17 +21,17 @@ show_title:     true
 
 *For anxious people-pleasers, dopamine seekers, and anyone who needs a day to recover from their weekend.*
 
-If you've ever found yourself **staring at a calendar full of events you should be looking forward to**, but feeling dread instead of anticipation, you aren't alone. 
+If you've ever found yourself **staring at a calendar full of events you should be looking forward to**, but feeling dread instead of anticipation, you aren't alone.
 
 **You might need this if:**
 
-- You have overlapping social engagements (27 Dresses, anyone?)
+- You regularly have overlapping social engagements
 - You pack so much into your vacation days that you need to lie down to recover
-- There's a nagging background sense in your body that somebody, somewhere, is having a good time *without you*
+- You have a nagging background sense that somebody, somewhere, is having a good time *without you*
 
 > Psst... You're not a terrible person for wanting to skip out on Great-Aunt-Sandra's daughter-in-law's second baby shower so you can take a nap.
 
-{{< sw-cta label="Reduce Your FOMO Today" >}}
+{{< sw-cta label="Address Your FOMO Today" >}}
 
 
 {{< sw-subhead >}}FOMO isn't really the fear of missing out.{{< /sw-subhead >}}
@@ -39,19 +39,19 @@ If you've ever found yourself **staring at a calendar full of events you should 
 
 It's fear of making the wrong choice.
 
-**Because when you choose one thing… you're letting go of everything else.**
+**Because when you choose one thing, you're letting go of everything else.**
 
 So instead of choosing, **you try to do it all.**
 
-And that's what's actually exhausting you.
+That's what's draining you.
 
-The FOMO Fix helps you make decisions you feel good about — so you can stop living in constant second-guessing and start creating a life that actually feels calm, aligned, and fully yours.
+**The FOMO Fix** helps you make decisions that you feel good about, so you can stop second-guessing and start creating a life that feels calm, aligned, and chosen.
 
 {{< sw-image src="img/sales/LEE_Seonaid-10094.jpg" alt="Blond woman in a burgundy casual top in front of a grey background with glasses on her head smiling into the camera" />}}
 
 > Hi! I'm Seonaid, creator of The FOMO Fix, and a recovering Yes-a-holic.
 
-I was the kind of person who sat down for a coffee, but instead drank it (while thinking about my plans for the day) on the way to somewhere else.
+I was the kind of person who sat down for a coffee, but instead drank it on the way to somewhere else while rehearsing my plans for the day.
 
 All of my friends were the same.
 
@@ -67,10 +67,10 @@ Like… all of us. The techies, the professors, the artists, the activists. All 
 
 We fell like dominoes through our thirties and forties. It wasn't pretty.
 
-After seeing it happen again and again (even to me!) I started being able to see my triggers and catch them before the cycle got too far along.
+After seeing it happen again and again - even after I was meditating regularly - I could notice my triggers and *then* I learned to catch them before the cycle got too far along.
 
 {{< sw-callout label="let's talk root causes" quote="It's not about the phone" >}}
-The fear of missing out doesn't really come from looking at what other people are doing — that's just a symptom. It comes from deeper things that we believe about ourselves, our roles in the world, and time.
+The fear of missing out doesn't really come from looking at what other people are doing: that's just a symptom. It comes from deeper things that we believe about ourselves, our roles in the world, and time.
 {{< /sw-callout >}}
 
 {{< sw-subhead >}}This thing we call FOMO has been kicking around for a while.{{< /sw-subhead >}}
@@ -94,8 +94,9 @@ A heartfelt no, delivered with warmth and clarity, does less damage to a relatio
 
 **Most people respect honesty more than they resent a boundary.**
 
-And the people who don't? That's useful information too — about them, not about whether you were allowed to say no.
+I would love to promise you that nobody will ever get mad, but I can't. What I offer instead is practices to work with that discomfort, and to see what it is costing you.
 
+Your time and attention can become a **gift freely bestowed**, not an obligation.
 
 {{< sw-contrast >}}
 {{< sw-contrast-col label="The FOMO Fix will not encourage you to" tone="not" >}}
@@ -113,9 +114,9 @@ And the people who don't? That's useful information too — about them, not abou
 {{< /sw-contrast-col >}}
 {{< /sw-contrast >}}
 
-With The FOMO Fix in place, you can still *do* lots of stuff. Possibly more than other people think is sensible.
+With The FOMO Fix in place, you can still *do* lots of stuff... possibly still more than other people think is sensible.
 
-Even if you have a high need for stimulation, clearing the fears that are driving your calendar and replacing them with discernment lets you create a high-speed life that's exciting on its own terms — rather than driven by a sense of time slipping away.
+Even if you have a high need for stimulation, clearing the fears that are driving your calendar and replacing them with discernment lets you create a high-speed life that's exciting on its own terms, rather than driven by a sense of time slipping away.
 
 {{< sw-learn label="Path to Clarity" title="Here's the Path to Clarity in The FOMO Fix" bottom_text="Imagine how good it could feel to just drink your coffee without anything lurking in the back of your mind.">}}
 {{< sw-learn-row verb="Identify" >}}what's actually driving your FOMO... this might surprise you!{{< /sw-learn-row >}}
@@ -148,9 +149,9 @@ The FOMO Fix can help you find your way to a new sense of balance, so you can ha
 
 {{< sw-box-group label="What You'll Learn" >}}
 - Become crystal clear on exactly what's driving your FOMO (so you can stop reacting to it)
-- Feel confident saying no — without guilt or over-explaining
-- Make decisions about your time quickly and clearly by learning how to incorporate Pause Points
-- Stop overcommitting and start enjoying what you actually choose to do
+- Feel confident saying no, without guilt or over-explaining
+- Make decisions quickly and clearly incorporating Pause Points
+- Stop overcommitting and start enjoying whatever you choose to do
 {{< /sw-box-group >}}
 {{< /sw-box >}}
 
